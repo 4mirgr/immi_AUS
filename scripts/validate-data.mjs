@@ -11,6 +11,8 @@ const load = name => {
 const meta = load('meta');
 const pathways = load('pathways');
 const study = load('study');
+const funding = load('funding');
+const team = load('team');
 const tasks = load('tasks');
 const milestones = load('milestones');
 const isDate = s => /^\d{4}-\d{2}-\d{2}$/.test(s) && !Number.isNaN(Date.parse(s));
@@ -70,6 +72,35 @@ if (milestones) {
     if (!['estimate', 'confirmed'].includes(m.kind)) errors.push(`milestones/${m.id}: kind must be estimate or confirmed`);
     checkSources(`milestones/${m.id}`, [m.source]);
   }
+}
+
+const FUNDING_LEVELS = ['verified', 'unverified', 'expired'];
+const FUNDING_KINDS = ['estimate', 'confirmed', 'rolling'];
+if (funding) {
+  const fids = new Set();
+  for (const f of funding) {
+    const where = `funding/${f.id}`;
+    if (fids.has(f.id)) errors.push(`${where}: duplicate id`);
+    fids.add(f.id);
+    if (!f.title) errors.push(`${where}: title missing`);
+    if (!f.provider) errors.push(`${where}: provider missing`);
+    if (!FUNDING_LEVELS.includes(f.level)) errors.push(`${where}: level must be one of ${FUNDING_LEVELS}`);
+    if (!isDate(f.lastChecked)) errors.push(`${where}: lastChecked must be YYYY-MM-DD`);
+    if (f.deadline && !isDate(f.deadline)) errors.push(`${where}: bad deadline`);
+    if (f.deadlineKind && !FUNDING_KINDS.includes(f.deadlineKind)) errors.push(`${where}: deadlineKind must be one of ${FUNDING_KINDS}`);
+    checkSources(where, f.sources);
+  }
+}
+
+if (team) {
+  if (!isDate(team.updated)) errors.push('team.updated must be YYYY-MM-DD');
+  if (!Array.isArray(team.members) || team.members.length === 0) errors.push('team: members missing');
+  else for (const m of team.members) if (!m.id || !m.name) errors.push('team/members: id and name required');
+  for (const m of team.sharedMilestones || []) {
+    if (!isDate(m.date)) errors.push(`team/sharedMilestones/${m.id}: bad date`);
+    if (!['estimate', 'confirmed'].includes(m.kind)) errors.push(`team/sharedMilestones/${m.id}: kind must be estimate or confirmed`);
+  }
+  for (const d of team.decisions || []) if (!isDate(d.date)) errors.push('team/decisions: bad date');
 }
 
 if (warnings.length) console.warn(warnings.map(w => `! ${w}`).join('\n'));

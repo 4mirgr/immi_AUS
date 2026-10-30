@@ -27,6 +27,8 @@
   let weights = {};
   let taskCat = 'all';
   let studyFilter = 'all';
+  let fundingField = 'all';
+  let fundingType = 'all';
 
   /* ---------- navigation ---------- */
   const links = $$('.nav-link');
@@ -70,7 +72,7 @@
   /* ---------- data ---------- */
   async function loadData() {
     const out = {};
-    await Promise.all(['meta', 'pathways', 'study', 'tasks', 'milestones'].map(async n => {
+    await Promise.all(['meta', 'pathways', 'study', 'funding', 'team', 'tasks', 'milestones'].map(async n => {
       const r = await fetch(`data/${n}.json`, { cache: 'no-cache' });
       if (!r.ok) throw new Error(`${n}.json`);
       out[n] = await r.json();
@@ -251,6 +253,120 @@
       </article>`).join('');
   }
 
+  /* ---------- funding finder ---------- */
+  const FUNDING_LEVEL = { verified: 'بررسی‌شده', unverified: 'تأییدنشده', expired: 'منقضی' };
+  const FIELD_LABEL = { 'digital-health': 'دیجیتال‌هلث / AI', 'clinical': 'پژوهش بالینی / داخلی', 'public-health': 'سلامت عمومی' };
+  const TYPE_LABEL = { rtp: 'RTP', university: 'دانشگاهی', project: 'پروژه‌محور', government: 'دولتی', ngo: 'بنیاد / انجمن' };
+  const fieldLabel = id => FIELD_LABEL[id] || id;
+  const typeLabel = id => TYPE_LABEL[id] || id;
+
+  function fundingDeadlineText(f) {
+    if (!f.deadline) return f.deadlineKind === 'rolling' ? 'باز / متغیر (rolling)' : 'نامشخص';
+    const d = daysUntil(f.deadline);
+    const when = d < 0 ? `${fa(-d)} روز گذشته` : d === 0 ? 'امروز' : `${fa(d)} روز دیگر`;
+    const kind = f.deadlineKind === 'confirmed' ? 'تأییدشده' : 'تخمینی';
+    return `${fmtFa(f.deadline)} (${when} · ${kind})`;
+  }
+
+  function fundingCard(f) {
+    return `
+      <article class="path-card ${f.level === 'verified' ? 'yes' : 'unverified'}">
+        <header><span class="flag">${f.flag}</span><div><h3>${esc(f.title)}</h3><span class="level ${f.level === 'verified' ? 'yes' : 'unverified'}">${FUNDING_LEVEL[f.level] || esc(f.level)}</span></div></header>
+        <p class="verdict-line">${esc(f.provider)}</p>
+        <dl class="long">
+          ${[['تأمین مالی', f.funding], ['حقوق', f.stipend], ['مهلت', fundingDeadlineText(f)], ['چه کسی', f.who], ['زبان', f.language], ['ربط به هدف', f.relevance]]
+            .filter(([, v]) => v).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}
+        </dl>
+        ${f.requirements?.length ? `<details class="reqs"><summary>چک‌لیست requirements (${f.requirements.length} مورد)</summary><ul class="req-list">${f.requirements.map(r => `<li>${esc(r)}</li>`).join('')}</ul></details>` : ''}
+        <button class="text-button add-to-tracker" data-funding="${esc(f.id)}">＋ افزودن چک‌لیست به تراکر</button>
+        ${sourceLinks(f.sources)}
+        <small class="verified">${f.level === 'verified' ? 'بررسی‌شده' : 'سرنخ — تأیید نشده'} · ${esc(fmtFa(f.lastChecked))}</small>
+      </article>`;
+  }
+
+  function renderFundingDeadlines() {
+    const list = (D.funding || []).filter(f => f.deadline).sort((a, b) => a.deadline.localeCompare(b.deadline));
+    const upcoming = list.filter(f => daysUntil(f.deadline) >= 0);
+    const shown = (upcoming.length ? upcoming : list).slice(0, 5);
+    $('#funding-deadlines').innerHTML = shown.length ? shown.map(f => {
+      const d = daysUntil(f.deadline);
+      const hot = d >= 0 && d <= 30;
+      return `<div class="deadline-row ${hot ? 'hot' : ''}">
+        <div><strong>${esc(f.title)}</strong><small>${esc(f.provider)} · ${esc(fieldLabel(f.field))}</small></div>
+        <div class="deadline-meta"><b>${d < 0 ? `${fa(-d)} روز گذشته` : d === 0 ? 'امروز' : `${fa(d)} روز دیگر`}</b><small dir="ltr">${esc(f.deadline)}</small></div>
+      </div>`;
+    }).join('') : '<p class="note">ددلاین ثبت‌شده‌ای نیست.</p>';
+  }
+
+  function renderFunding() {
+    const list = D.funding || [];
+    const fields = ['all', ...new Set(list.map(f => f.field))];
+    const types = ['all', ...new Set(list.map(f => f.type))];
+    $('#funding-field-filters').innerHTML = fields.map(c =>
+      `<button class="chip ${c === fundingField ? 'on' : ''}" data-funding-field="${esc(c)}">${c === 'all' ? 'همهٔ فیلدها' : esc(fieldLabel(c))}</button>`).join('');
+    $('#funding-type-filters').innerHTML = types.map(c =>
+      `<button class="chip ${c === fundingType ? 'on' : ''}" data-funding-type="${esc(c)}">${c === 'all' ? 'همهٔ انواع' : esc(typeLabel(c))}</button>`).join('');
+    const rows = list.filter(f => (fundingField === 'all' || f.field === fundingField) && (fundingType === 'all' || f.type === fundingType));
+    $('#funding-grid').innerHTML = rows.map(fundingCard).join('') || '<p class="note">فاندی با این فیلتر نیست.</p>';
+    renderFundingDeadlines();
+  }
+
+  function addFundingToTracker(f) {
+    const title = `آماده‌سازی مدارک: ${f.title}`;
+    if (tasks.items.some(t => t.title === title)) { toast('این فاند از قبل در تراکر هست'); return; }
+    tasks.items.push({
+      id: newId(),
+      title,
+      cat: 'research',
+      prio: 'high',
+      due: f.deadline || null,
+      note: (f.requirements || []).map(r => `• ${r}`).join(' '),
+      done: false
+    });
+    refreshTasksEverywhere();
+    toast('چک‌لیست به تراکر اضافه شد');
+  }
+
+  /* ---------- team ---------- */
+  function renderTeam() {
+    const T = D.team || {};
+    const members = T.members || [];
+    $('#team-members').innerHTML = members.map(m => `
+      <article class="member-card">
+        <header><span class="member-avatar">${esc(m.initials)}</span><div><h3>${esc(m.name)}</h3><span class="level">${esc(m.role)}</span></div></header>
+        <p class="member-path"><b>مسیر:</b> ${esc(m.path)}</p>
+        <p class="member-status"><b>وضعیت:</b> ${esc(m.status)}</p>
+        <ul class="focus-list">${(m.focus || []).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
+        <div class="strengths">${(m.strengths || []).map(s => `<span class="chip static">${esc(s)}</span>`).join('')}</div>
+      </article>`).join('');
+
+    $('#team-milestones').innerHTML = (T.sharedMilestones || []).map(m => {
+      const d = daysUntil(m.date);
+      const when = d < 0 ? `${fa(-d)} روز پیش` : d === 0 ? 'امروز' : `${fa(d)} روز دیگر`;
+      const kindTxt = m.kind === 'confirmed' ? 'تأییدشده' : 'تخمینی';
+      return `<div class="ms ${parse(m.date) < today() ? 'past' : ''}">
+        <div class="ms-date"><b>${esc(fmtFa(m.date))}</b><small dir="ltr">${esc(m.date)}</small></div>
+        <div class="ms-body"><strong>${esc(m.title)}</strong>${m.note ? `<small>${esc(m.note)}</small>` : ''}<small class="owner">مالک: ${esc(m.owner)}</small></div>
+        <div class="ms-meta"><i class="kind ${m.kind}">${kindTxt}</i><small>${when}</small></div>
+      </div>`;
+    }).join('');
+
+    $('#team-synergies').innerHTML = (T.synergies || []).map(x => `
+      <div class="syn"><div><strong>${esc(x.action)}</strong><small>${esc(x.detail)}${x.owner ? ` · مالک: ${esc(x.owner)}` : ''}</small></div><b class="prio-${esc(String(x.priority || '').toLowerCase())}">${esc(x.priority || '')}</b></div>`).join('');
+
+    $('#team-agenda').innerHTML = (T.weeklyAgenda || []).map(a => `<li>${esc(a)}</li>`).join('');
+    $('#team-decisions').innerHTML = (T.decisions || []).map(d => `
+      <div class="decision"><strong>${esc(d.decision)}</strong><small>${esc(fmtFa(d.date))} · ${esc(d.owner)}</small></div>`).join('');
+
+    const tools = T.tools || {};
+    $('#team-tools').innerHTML = [
+      ['مستندات زنده', tools.liveDocs],
+      ['جلسات', tools.meetings],
+      ['همگام‌سازی', tools.sync],
+      ['Google Sheet', tools.sheetHint]
+    ].filter(([, v]) => v).map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('');
+  }
+
   /* ---------- tracker ---------- */
   function renderTaskControls() {
     $('#task-cat').innerHTML = allCats().map(c => `<option value="${c.id}">${esc(c.label)}</option>`).join('');
@@ -386,6 +502,12 @@
       if (tf) { taskCat = tf.dataset.taskFilter; renderTaskFilters(); renderTasks(); return; }
       const sf = e.target.closest('[data-study-filter]');
       if (sf) { studyFilter = sf.dataset.studyFilter; renderStudy(); return; }
+      const ff = e.target.closest('[data-funding-field]');
+      if (ff) { fundingField = ff.dataset.fundingField; renderFunding(); return; }
+      const ft = e.target.closest('[data-funding-type]');
+      if (ft) { fundingType = ft.dataset.fundingType; renderFunding(); return; }
+      const fa = e.target.closest('[data-funding]');
+      if (fa) { const f = D.funding.find(x => x.id === fa.dataset.funding); if (f) addFundingToTracker(f); return; }
     });
     $('#task-form').addEventListener('submit', e => {
       e.preventDefault();
@@ -442,6 +564,7 @@
     renderDashboard();
     renderWeights(); renderRanking();
     renderPathways(); renderStudy(); renderPhd(); renderSynergies();
+    renderFunding(); renderTeam();
     renderTaskControls(); renderTasks();
     renderBoardNote(); renderMilestones();
     renderSources();

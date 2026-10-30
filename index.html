@@ -15,8 +15,10 @@
       <a class="nav-link active" href="#dashboard" data-section="dashboard"><span>⌂</span> نمای کلی</a>
       <a class="nav-link" href="#pathways" data-section="pathways"><span>◎</span> مسیرهای کاری</a>
       <a class="nav-link" href="#study" data-section="study"><span>✦</span> مسیرهای تحصیلی</a>
+      <a class="nav-link" href="#funding" data-section="funding"><span>◈</span> فاند و بورسیه</a>
       <a class="nav-link" href="#tracker" data-section="tracker"><span>☑</span> تراکر کارها</a>
       <a class="nav-link" href="#calendar" data-section="calendar"><span>◷</span> تقویم و ددلاین</a>
+      <a class="nav-link" href="#team" data-section="team"><span>⧉</span> همکاری تیمی</a>
       <a class="nav-link" href="#cv" data-section="cv"><span>▤</span> CV حرفه‌ای</a>
       <a class="nav-link" href="#linkedin" data-section="linkedin"><span>in</span> LinkedIn Lab</a>
       <a class="nav-link" href="#content" data-section="content"><span>✎</span> تقویم محتوا</a>
@@ -112,6 +114,18 @@
       <div class="warning">فول‌فاند یعنی شهریه، هزینهٔ زندگی و بیمه هر سه پوشش داده شود. در ایتالیا چنین چیزی برای تو تأیید نشد؛ هر ادعای «فول‌فاند» در سایت‌های بورسیه را با فراخوان رسمی تطبیق بده.</div>
     </section>
 
+    <section id="funding" class="page">
+      <div class="section-intro"><span class="kicker">FUNDING FINDER</span><h2>فاند و بورسیهٔ استرالیا</h2><p>فاندهای مرتبط با رشتهٔ تو — دیجیتال‌هلث / هوش مصنوعی در سلامت و پژوهش بالینی — از منابع رسمی و محلی استرالیا. «تأییدنشده» یعنی سرنخ است و باید با صفحهٔ رسمی تطبیق داده شود. برای هر فاند می‌توانی چک‌لیست requirements را به تراکر اضافه کنی تا از قبل آماده شوی.</p></div>
+      <article class="panel deadline-panel">
+        <div class="panel-head"><div><span class="kicker">UPCOMING DEADLINES</span><h3>ددلاین‌های نزدیک</h3></div></div>
+        <div id="funding-deadlines"></div>
+      </article>
+      <div id="funding-field-filters" class="chips" role="group" aria-label="فیلتر فیلد"></div>
+      <div id="funding-type-filters" class="chips" role="group" aria-label="فیلتر نوع"></div>
+      <div id="funding-grid" class="path-grid"></div>
+      <div class="warning">مبلغ‌ها، مهلت‌ها و شرایط مرتب تغییر می‌کنند. پیش از هر اپلای فقط فراخوان رسمی همان نهاد را ملاک قرار بده. ددلاین‌های «تخمینی» از دور قبل حدس زده شده‌اند.</div>
+    </section>
+
     <section id="tracker" class="page">
       <div class="section-intro row">
         <div><span class="kicker">ACTION TRACKER</span><h2>تراکر کارها</h2><p>کارها فقط در همین مرورگر ذخیره می‌شوند. با «خروجی» پشتیبان بگیر و در دستگاه دیگر «ورودی» بزن. کارهای تازهٔ داده‌ها بعد از هر به‌روزرسانی سایت به فهرست تو اضافه می‌شوند.</p></div>
@@ -136,6 +150,33 @@
         <input type="date" id="board-date">
       </article>
       <div id="milestones" class="milestones"></div>
+    </section>
+
+    <section id="team" class="page">
+      <div class="section-intro"><span class="kicker">TEAM</span><h2>همکاری تیمی — گرامی و آرش</h2><p>دو مسیر مکمل (Specialist/RACP برای گرامی و GP/RACGP PEP برای آرش) با یک زیرساخت مشترک: نقاط عطف، تبادل مهارت، جلسهٔ هفتگی و ثبت تصمیم‌ها.</p></div>
+      <div id="team-members" class="team-grid"></div>
+      <article class="panel">
+        <div class="panel-head"><div><span class="kicker">SHARED MILESTONES</span><h3>نقاط عطف مشترک</h3></div></div>
+        <div id="team-milestones" class="milestones"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><div><span class="kicker">SYNERGY</span><h3>تبادل مهارت و هم‌افزایی</h3></div></div>
+        <div id="team-synergies"></div>
+      </article>
+      <div class="grid-main">
+        <article class="panel">
+          <div class="panel-head"><div><span class="kicker">WEEKLY AGENDA</span><h3>آجندای جلسهٔ هفتگی</h3></div></div>
+          <ol class="verdict-list" id="team-agenda"></ol>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><div><span class="kicker">DECISION LOG</span><h3>دفترچهٔ تصمیم‌ها</h3></div></div>
+          <div id="team-decisions"></div>
+        </article>
+      </div>
+      <article class="panel">
+        <div class="panel-head"><div><span class="kicker">TOOLS &amp; SYNC</span><h3>ابزارها و همگام‌سازی</h3></div></div>
+        <div id="team-tools" class="verdict-list plain"></div>
+      </article>
     </section>
 
     <section id="cv" class="page">

@@ -1,0 +1,237 @@
+[
+  {
+    "id": "au-rtp-any",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "clinical",
+    "title": "بورسیهٔ دولتی RTP (Research Training Program)",
+    "provider": "دولت فدرال استرالیا — از طریق هر دانشگاه",
+    "type": "rtp",
+    "funding": "شهریه + حقوق بدون مالیات (حدود ۳۳ تا ۴۰ هزار دلار استرالیا در سال) + بیمهٔ OSHC",
+    "stipend": "حدود ۳۳٬۰۰۰ تا ۴۰٬۰۰۰ دلار استرالیا در سال",
+    "deadline": null,
+    "deadlineKind": "rolling",
+    "who": "دانشجوی بین‌المللی HDR (PhD یا Research Master) با سابقهٔ تحصیلی قوی و پتانسیل پژوهشی",
+    "requirements": [
+      "مدرک معتبر با معدل بالا",
+      "یافتن سوپروایزر و موافقت اولیهٔ او",
+      "سابقهٔ انتشار (مقاله) امتیاز قوی",
+      "پروپوزال پژوهشی اولیه",
+      "IELTS/OET طبق سطح هر دانشگاه",
+      "دو توصیه‌نامهٔ آکادمیک"
+    ],
+    "language": "IELTS 6.5-7.0 یا معادل (هر دانشگاه خودش تعیین می‌کند)",
+    "relevance": "پایه‌ترین مسیر فول‌فاند برای هر دو فیلد (بالینی و دیجیتال‌هلث). با انتخاب سوپروایزر مناسب در بیمارستان وابسته، تجربهٔ محلی و شبکه می‌سازد.",
+    "level": "verified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "education.gov.au — Research Training Program", "url": "https://www.education.gov.au/research-block-grants/research-training-program", "kind": "official" },
+      { "title": "studyinaustralia.gov.au — بورسیه‌ها", "url": "https://www.studyinaustralia.gov.au/", "kind": "official" }
+    ]
+  },
+  {
+    "id": "uts-irtp",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "clinical",
+    "title": "بورسیهٔ IRTP دانشگاه UTS",
+    "provider": "University of Technology Sydney",
+    "type": "university",
+    "funding": "شهریه تا ۳٫۵ سال PhD + حقوق سالانه + بیمهٔ OSHC",
+    "stipend": "۳۹٬۰۰۰ دلار استرالیا در سال (نمونه از ۱ ژانویه ۲۰۲۶)",
+    "deadline": "2027-06-03",
+    "deadlineKind": "estimate",
+    "who": "دانشجوی جدید بین‌المللی تحقیقاتی؛ دریافت جایزهٔ مشابه دیگر مجاز نیست",
+    "requirements": [
+      "سابقهٔ تحصیلی درخشان",
+      "پتانسیل پژوهشی مستند",
+      "ایمیل به استاد راهنما پیش از درخواست رسمی",
+      "تکمیل سابقهٔ پژوهشی"
+    ],
+    "language": "طبق الزام هر دانشکده",
+    "relevance": "نمونهٔ تأییدشدهٔ IRTP با رقم حقوق مشخص؛ برای پژوهش بالینی یا سلامت عمومی مناسب است.",
+    "level": "verified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "UTS — IRTP Scholarship", "url": "https://www.uts.edu.au/scholarship/international-research-training-program-scholarship-irtp", "kind": "official" }
+    ]
+  },
+  {
+    "id": "qut-healthcare-ai",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "digital-health",
+    "title": "PhD — تأثیر سیستمی هوش مصنوعی در سلامت",
+    "provider": "Queensland University of Technology (QUT)",
+    "type": "project",
+    "funding": "بورسیهٔ PhD پروژه‌محور (stipend + احتمالاً شهریه)",
+    "stipend": "طبق فراخوان (معمولاً هم‌تراز RTP)",
+    "deadline": null,
+    "deadlineKind": "rolling",
+    "who": "داوطلب با پیشینهٔ سلامت/داده/AI و علاقه به ارزیابی سیستمی AI در نظام سلامت",
+    "requirements": [
+      "پیشینهٔ بالینی یا سلامت عمومی",
+      "آشنایی با آمار یا روش‌های ارزیابی",
+      "انگیزه‌نامهٔ قوی"
+    ],
+    "language": "IELTS طبق الزام QUT",
+    "relevance": "دقیقاً فیلد دیجیتال‌هلث/هوش مصنوعی در سلامت که در پلن خودت هدف گرفته‌ای؛ ترکیب پزشک + AI پروفایل متمایز می‌سازد.",
+    "level": "unverified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "QUT — Examining system-level impact of Healthcare AI PhD Scholarship", "url": "https://www.qut.edu.au/study/fees-and-scholarships/scholarships/examining-system-level-impact-of-healthcare-ai-phd-scholarship", "kind": "official" }
+    ]
+  },
+  {
+    "id": "usyd-ai-qa",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "digital-health",
+    "title": "PhD — سیستم پرسش‌وپاسخ بیمار با هوش مصنوعی",
+    "provider": "University of Sydney",
+    "type": "project",
+    "funding": "بورسیهٔ پژوهشی تحصیلات تکمیلی (stipend)",
+    "stipend": "طبق فراخوان",
+    "deadline": null,
+    "deadlineKind": "rolling",
+    "who": "داوطلب با پیشینهٔ پزشکی/علوم سلامت/مهندسی و علاقه به NLP و رابط بیمار",
+    "requirements": [
+      "سابقهٔ مرتبط با سلامت یا AI",
+      "پروپوزال هم‌راستا با پروژه"
+    ],
+    "language": "IELTS طبق الزام دانشگاه سیدنی",
+    "relevance": "نمونهٔ واقعی فاند دیجیتال‌هلث در یکی از برترین دانشگاه‌های استرالیا.",
+    "level": "unverified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "University of Sydney — AI-based patient-facing Q&A systems", "url": "https://www.sydney.edu.au/scholarships/c/ai-based-patient-facing-question-and-answer-systems.html", "kind": "official" }
+    ]
+  },
+  {
+    "id": "monash-wearables-ai",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "digital-health",
+    "title": "PhD — پوشیدنی‌های هوشمند و اکوسیستم هوش مصنوعی",
+    "provider": "Monash University (Clayton, Melbourne)",
+    "type": "project",
+    "funding": "بورسیهٔ PhD (stipend)",
+    "stipend": "طبق فراخوان",
+    "deadline": null,
+    "deadlineKind": "rolling",
+    "who": "داوطلب با پیشینهٔ سلامت/مهندسی و علاقه به wearables و AI",
+    "requirements": [
+      "سابقهٔ مرتبط",
+      "آمادگی کار بین‌رشته‌ای"
+    ],
+    "language": "IELTS طبق الزام Monash",
+    "relevance": "نمونهٔ پروژه‌محور دیجیتال‌هلث؛ ملبورن قطب سلامت دیجیتال استرالیاست.",
+    "level": "unverified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "Monash — Intelligent Wearables and AI Ecosystem Development (SEEK)", "url": "https://www.seek.com.au/job/94842237", "kind": "commercial" }
+    ]
+  },
+  {
+    "id": "csiro-iphd",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "digital-health",
+    "title": "CSIRO Industry PhD (iPhD) — پروژه‌های صنعتی سلامت دیجیتال",
+    "provider": "CSIRO (Data61) + شریک صنعتی + دانشگاه",
+    "type": "project",
+    "funding": "بورسیهٔ iPhD با پشتیبانی صنعت (stipend + ارتباط صنعتی)",
+    "stipend": "بالاتر از نرخ RTP در برخی پروژه‌ها",
+    "deadline": null,
+    "deadlineKind": "rolling",
+    "who": "داوطلب علاقه‌مند به پروژهٔ صنعتی کاربردی؛ رقابتی",
+    "requirements": [
+      "تطابق مهارت با پروژهٔ خاص",
+      "مصاحبه با شریک صنعتی"
+    ],
+    "language": "IELTS طبق الزام دانشگاه شریک",
+    "relevance": "مسیر کاربردی با ارتباط صنعتی؛ برای سلامت دیجیتال/داده بسیار مناسب است.",
+    "level": "unverified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "CSIRO — Industry PhD (iPhD)", "url": "https://www.csiro.au/en/careers/students-and-graduates/scholarships/industry-phd", "kind": "official" }
+    ]
+  },
+  {
+    "id": "nhmrc-mrff-project",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "clinical",
+    "title": "پروژه‌های PhD فاندشده از گرنت‌های NHMRC / MRFF",
+    "provider": "NHMRC / MRFF — از طریق GrantConnect و آگهی‌های دانشگاهی",
+    "type": "government",
+    "funding": "stipend از بودجهٔ پروژه‌های پژوهشی فاندشده",
+    "stipend": "متغیر، معمولاً هم‌تراز RTP",
+    "deadline": null,
+    "deadlineKind": "rolling",
+    "who": "دانشجوی PhD که به یک پروژهٔ دارای گرنت متصل شود",
+    "requirements": [
+      "یافتن پروژهٔ دارای گرنت و سوپروایزر اصلی",
+      "سابقهٔ پژوهشی مرتبط"
+    ],
+    "language": "IELTS طبق الزام دانشگاه",
+    "relevance": "راه واقعی یافتن PhD فاندشده در پژوهش بالینی: اتصال به پروژه‌ای که بودجه دارد.",
+    "level": "unverified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "NHMRC — Funding", "url": "https://www.nhmrc.gov.au/", "kind": "official" },
+      { "title": "GrantConnect", "url": "https://www.grants.gov.au/", "kind": "official" }
+    ]
+  },
+  {
+    "id": "unimelb-research-scholarship",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "clinical",
+    "title": "بورسیهٔ پژوهشی دانشگاه ملبورن (RTP + top-up)",
+    "provider": "University of Melbourne",
+    "type": "university",
+    "funding": "شهریه + stipend + در برخی موارد top-up",
+    "stipend": "هم‌تراز RTP",
+    "deadline": "2026-10-31",
+    "deadlineKind": "estimate",
+    "who": "دانشجوی HDR بین‌المللی؛ رقابتی",
+    "requirements": [
+      "سابقهٔ تحصیلی قوی",
+      "سوپروایزر",
+      "مقاله/سابقهٔ پژوهشی"
+    ],
+    "language": "IELTS 6.5-7.0",
+    "relevance": "ملبورن قطب پژوهش بالینی و دیجیتال‌هلث؛ شبکهٔ بیمارستانی قوی.",
+    "level": "unverified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "University of Melbourne — Research scholarships", "url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship", "kind": "official" }
+    ]
+  },
+  {
+    "id": "racgp-foundation",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "field": "clinical",
+    "title": "گرنت‌های پژوهشی RACGP Foundation",
+    "provider": "RACGP Foundation",
+    "type": "ngo",
+    "funding": "گرنت‌های پژوهشی پزشکی خانواده (مبلغ متغیر)",
+    "stipend": "متغیر بر اساس گرنت",
+    "deadline": null,
+    "deadlineKind": "rolling",
+    "who": "پزشک/پژوهشگر در حوزهٔ پزشکی خانواده و مراقبت اولیه",
+    "requirements": [
+      "پروپوزال مرتبط با سلامت عمومی/پزشکی خانواده",
+      "وابستگی به سوپروایزر یا موسسه"
+    ],
+    "language": "انگلیسی",
+    "relevance": "اگر مسیر GP (هم‌راستا با دکتر آرش) را هم در نظر بگیری، گرنت‌های RACGP سابقهٔ پژوهشی استرالیایی می‌سازد.",
+    "level": "unverified",
+    "lastChecked": "2026-10-30",
+    "sources": [
+      { "title": "RACGP Foundation — Research grants", "url": "https://foundation.racgp.org.au/", "kind": "official" }
+    ]
+  }
+]

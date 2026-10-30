@@ -138,3 +138,43 @@ a.badge:hover{background:var(--teal);color:#fff}
   .src-row{grid-template-columns:1fr auto}.src-row .src-state{grid-column:1/-1;justify-self:start}
 }
 @media print{.path-grid,.verdict-panel{display:none}}
+
+/* funding finder */
+.deadline-panel{margin-bottom:20px}
+.deadline-row{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+.deadline-row:first-child{border-top:0}
+.deadline-row strong,.deadline-row small{display:block}
+.deadline-row strong{font-size:12px}
+.deadline-row small{font-size:10px;color:var(--muted);margin-top:3px}
+.deadline-meta{text-align:left;display:grid;gap:3px;justify-items:end}
+.deadline-meta b{font:700 12px 'DM Sans';color:var(--teal)}
+.deadline-meta small{font:10px 'DM Sans';color:var(--muted)}
+.deadline-row.hot{background:#fff8e9;border-radius:10px;padding:11px 12px;margin-top:8px}
+.deadline-row.hot .deadline-meta b{color:#a94646}
+.reqs{margin-top:4px;font-size:11px}
+.reqs summary{cursor:pointer;color:var(--teal);font-weight:600}
+.req-list{margin:8px 0 0;padding:0 18px 0 0;line-height:1.9;color:#46576b}
+.add-to-tracker{align-self:flex-start;margin-top:2px}
+.add-to-tracker:hover{color:var(--teal-dark)}
+
+/* team */
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:20px}
+.member-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:11px}
+.member-card header{display:flex;gap:14px;align-items:flex-start}
+.member-avatar{width:48px;height:48px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;font:700 16px 'DM Sans'}
+.member-card h3{margin:0 0 6px;font-size:15px}
+.member-card .level{display:inline-block}
+.member-path,.member-status{margin:0;font-size:12px;line-height:1.8;color:#33465c}
+.member-path b,.member-status b{color:var(--teal-dark)}
+.focus-list{margin:0;padding:0 18px 0 0;font-size:11px;line-height:2;color:#46576b}
+.strengths{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.ms-body .owner{font-size:10px;color:var(--gold);font-weight:600}
+.decision{padding:11px 0;border-top:1px solid var(--line)}
+.decision:first-child{border-top:0}
+.decision strong,.decision small{display:block}
+.decision strong{font-size:12px;line-height:1.8}
+.decision small{font-size:10px;color:var(--muted);margin-top:4px}
+#team-tools li{line-height:2.1}
+
+@media(max-width:1050px){.team-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.deadline-row{grid-template-columns:1fr}.deadline-meta{justify-items:start;text-align:right}}

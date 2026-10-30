@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 
 const root = new URL('../', import.meta.url);
 const read = p => JSON.parse(readFileSync(new URL(p, root), 'utf8'));
-const FILES = ['pathways', 'study', 'milestones', 'phd-opportunities'];
+const FILES = ['pathways', 'study', 'milestones', 'phd-opportunities', 'funding', 'team'];
 
 function collect(node, found = new Set()) {
   if (Array.isArray(node)) node.forEach(n => collect(n, found));
