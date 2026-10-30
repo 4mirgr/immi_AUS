@@ -1,25 +1,57 @@
 # MedPath — Medical Career Command Center
 
-A lightweight, dependency-free Persian dashboard for managing Dr Amir Houshang Gerami's medical migration, CV, LinkedIn profile, and content plan.
+داشبورد فارسی و بدون وابستگی برای مدیریت مسیر مهاجرت، تحصیل، CV، لینکدین و محتوای دکتر امیر هوشنگ گرامی.
+A dependency-free Persian dashboard: no build step, no packages.
 
-## Run locally
+## بخش‌ها
+
+| بخش | محتوا |
+| --- | --- |
+| نمای کلی | شمارش معکوس بورد، پیشرفت، اولویت‌های پیش رو، جمع‌بندی راهبردی |
+| مسیرهای کاری | ۶ مسیر (استرالیا ×۲، آلمان، بریتانیا، کانادا، آمریکا) + ماتریس تصمیم با وزن‌های قابل تنظیم |
+| مسیرهای تحصیلی | ایتالیا (MAECI، تخصص پزشکی، DSU، ویزا) و استرالیا (IRTP/RTP) با وضعیت «فول‌فاند» هر کدام |
+| تراکر کارها | افزودن/ویرایش/حذف کار، اولویت، سررسید، فیلتر، خروجی و ورودی JSON |
+| تقویم و ددلاین | مهلت‌های تخمینی/تأییدشده + سررسید کارها + تاریخ بورد قابل تنظیم |
+| CV · LinkedIn · محتوا | متن آماده، دکمهٔ کپی و چاپ PDF |
+| منابع | همهٔ لینک‌ها با نوع منبع (رسمی/ثانویه/تجاری) و وضعیت بررسی خودکار |
+
+## اجرا
 
 ```bash
-cd /workspace/immi_AUS
 python3 -m http.server 4173
+# http://localhost:4173
 ```
 
-Then open `http://localhost:4173` locally. The app has no build step or package dependencies.
+سایت باید با وب‌سرور باز شود (داده‌ها با `fetch` خوانده می‌شوند)؛ دوبار کلیک روی `index.html` کار نمی‌کند.
 
-## Validation
+## داده‌ها (برای به‌روزرسانی)
+
+همهٔ محتوای قابل تغییر در `data/` است، نه در HTML:
+
+- `meta.json` — تاریخ آخرین بررسی، معیارها، وزن‌های پیش‌فرض، دسته‌بندی کارها
+- `pathways.json` / `study.json` — مسیرها، امتیاز ۱ تا ۵ هر معیار، منابع و `verified`
+- `tasks.json` — کارهای اولیه. کار تازه که اینجا اضافه شود، بعد از انتشار به تراکر کاربر هم می‌آید
+- `milestones.json` — مهلت‌ها (`estimate` یا `confirmed`)
+
+پس از هر تغییر:
 
 ```bash
-python3 -m http.server 4173
-curl -f http://127.0.0.1:4173/
+node scripts/validate-data.mjs
 ```
 
-## Notes
+و `lastVerified` را در `meta.json` به‌روز کن. وقتی بیش از ۳۰ روز بگذرد، نمای کلی هشدار «منابع قدیمی» نشان می‌دهد.
 
-- Replace all bracketed placeholders in the CV with verified information before use.
-- Migration and medical-registration requirements change frequently; verify them with official regulators before applying or paying fees.
-- Task completion is stored only in the browser's local storage.
+## خودکارسازی (GitHub Actions)
+
+- `pages.yml` — با هر push به `main` داده‌ها را اعتبارسنجی و سایت را روی GitHub Pages منتشر می‌کند.
+  یک‌بار در Settings → Pages، منبع را روی **GitHub Actions** بگذار.
+- `source-watch.yml` — هر دوشنبه همهٔ آدرس‌های منابع را می‌خواند، اثرانگشت محتوا را در `data/source-status.json`
+  ثبت می‌کند و اگر صفحه‌ای تغییر کرده یا باز نشده باشد issue با برچسب `source-watch` باز می‌کند.
+  صفحات پویا ممکن است بدون تغییر واقعی «تغییر کرده» شوند؛ issue را با چشم بررسی کن.
+
+## نکات
+
+- امتیازهای ماتریس تصمیم تخمین نویسنده‌اند، نه آمار رسمی.
+- موارد داخل `[براکت]` در CV را با اطلاعات واقعی و قابل اثبات پر کن.
+- شرایط مهاجرت و مجوز پزشکی مرتب تغییر می‌کند؛ پیش از پرداخت یا ثبت‌نام فقط منبع رسمی را ملاک قرار بده.
+- کارها و تنظیمات فقط در `localStorage` همین مرورگر ذخیره می‌شوند؛ از «خروجی JSON» پشتیبان بگیر.

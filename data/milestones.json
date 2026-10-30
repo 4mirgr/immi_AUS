@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ms-maeci",
+    "date": "2027-03-26",
+    "kind": "estimate",
+    "title": "مهلت احتمالی بورسیهٔ MAECI دور ۲۰۲۷/۲۸",
+    "note": "دور ۲۰۲۶/۲۷ مهلتش ۲۶ مارس ۲۰۲۶ بود؛ دور بعد هنوز اعلام نشده.",
+    "source": { "title": "esteri.it — فراخوان ۲۰۲۶/۲۷", "url": "https://www.esteri.it/wp-content/uploads/2026/03/Bando-26-27-ITA.pdf", "kind": "official" }
+  },
+  {
+    "id": "ms-irtp",
+    "date": "2027-06-03",
+    "kind": "estimate",
+    "title": "مهلت تقریبی بورسیهٔ تحقیقاتی استرالیا (نمونهٔ UTS)",
+    "note": "در ۲۰۲۶ درخواست‌ها از ۴ مه تا ۳ ژوئن باز بود؛ هر دانشگاه تاریخ خودش را دارد.",
+    "source": { "title": "UTS — IRTP", "url": "https://www.uts.edu.au/scholarship/international-research-training-program-scholarship-irtp", "kind": "official" }
+  },
+  {
+    "id": "ms-italy-visa",
+    "date": "2027-06-29",
+    "kind": "estimate",
+    "title": "احتمال اطلاعیهٔ ویزای تحصیلی سفارت ایتالیا",
+    "note": "در ۲۰۲۶ ایمیل نوبت‌ها از ۲۹ ژوئن شروع شد؛ برای ۲۰۲۷ تأیید نشده.",
+    "source": { "title": "سفارت ایتالیا در تهران", "url": "https://ambteheran.esteri.it/fa/?p=4368", "kind": "official" }
+  },
+  {
+    "id": "ms-ssm",
+    "date": "2027-07-21",
+    "kind": "estimate",
+    "title": "آزمون ملی تخصص پزشکی ایتالیا (تخمین)",
+    "note": "دور اخیر ۲۱ ژوئیه ۲۰۲۶ در بولونیا بود؛ تاریخ ۲۰۲۷ هنوز اعلام نشده.",
+    "source": { "title": "Unibo — تخصص پزشکی", "url": "https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/scuole-di-specializzazione/come-candidarsi-a-una-scuola-di-specializzazione-dellarea-medica", "kind": "official" }
+  }
+]
