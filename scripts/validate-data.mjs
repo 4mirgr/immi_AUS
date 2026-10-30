@@ -2,6 +2,7 @@
 import { readFileSync } from 'node:fs';
 
 const errors = [];
+const warnings = [];
 const load = name => {
   try { return JSON.parse(readFileSync(new URL(`../data/${name}.json`, import.meta.url), 'utf8')); }
   catch (e) { errors.push(`${name}.json: ${e.message}`); return null; }
@@ -47,6 +48,7 @@ for (const [file, list] of [['pathways', pathways], ['study', study]]) {
     if (p.scores !== null) {
       for (const c of criteria) {
         const v = p.scores?.[c];
+        if (v === undefined) { warnings.push(`${where}: no score for criterion ${c} (left out of the ranking)`); continue; }
         if (!Number.isInteger(v) || v < 1 || v > 5) errors.push(`${where}: score ${c} must be an integer 1-5`);
       }
     }
@@ -57,7 +59,7 @@ if (tasks) {
   for (const x of tasks) {
     if (t.has(x.id)) errors.push(`tasks/${x.id}: duplicate id`);
     t.add(x.id);
-    if (!cats.includes(x.cat)) errors.push(`tasks/${x.id}: unknown category ${x.cat}`);
+    if (!cats.includes(x.cat)) warnings.push(`tasks/${x.id}: category ${x.cat} is not in meta.categories (shown with its id)`);
     if (!['high', 'mid', 'low'].includes(x.prio)) errors.push(`tasks/${x.id}: bad prio`);
     if (x.due && !isDate(x.due)) errors.push(`tasks/${x.id}: bad due`);
   }
@@ -70,6 +72,7 @@ if (milestones) {
   }
 }
 
+if (warnings.length) console.warn(warnings.map(w => `! ${w}`).join('\n'));
 if (errors.length) {
   console.error(errors.map(e => `✗ ${e}`).join('\n'));
   process.exit(1);

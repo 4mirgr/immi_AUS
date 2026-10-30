@@ -79,6 +79,10 @@
       const r = await fetch('data/source-status.json', { cache: 'no-cache' });
       if (r.ok) out.status = await r.json();
     } catch { /* optional */ }
+    try {
+      const r = await fetch('data/phd-opportunities.json', { cache: 'no-cache' });
+      if (r.ok) out.phd = await r.json();
+    } catch { /* optional */ }
     return out;
   }
 
@@ -99,7 +103,12 @@
     saveTasks();
   }
   const saveTasks = () => store.set(KEYS.tasks, tasks);
-  const catLabel = id => (D.meta.categories.find(c => c.id === id) || { label: id }).label;
+  const allCats = () => {
+    const known = D.meta.categories.map(c => c.id);
+    const extra = [...new Set(tasks.items.map(t => t.cat))].filter(c => !known.includes(c));
+    return [...D.meta.categories, ...extra.map(id => ({ id, label: id }))];
+  };
+  const catLabel = id => (allCats().find(c => c.id === id) || { label: id }).label;
   const newId = () => `u-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`;
 
   function sortOpen(list) {
@@ -142,7 +151,7 @@
     $('#priority-list').innerHTML = open.slice(0, 5).map(taskLabel).join('') ||
       '<p class="note">کاری باز نیست. در تراکر کار تازه اضافه کن.</p>';
 
-    $('#category-progress').innerHTML = D.meta.categories.map(c => {
+    $('#category-progress').innerHTML = allCats().map(c => {
       const list = tasks.items.filter(t => t.cat === c.id);
       if (!list.length) return '';
       const p = Math.round(list.filter(t => t.done).length / list.length * 100);
@@ -165,18 +174,20 @@
   }
   function renderWeights() {
     $('#weights').innerHTML = D.meta.criteria.map(c => `
-      <label class="weight"><span>${esc(c.label)} <b id="w-${c.id}-v">${fa(weights[c.id])}</b></span>
-      <input type="range" min="0" max="5" step="1" value="${weights[c.id]}" data-weight="${c.id}"></label>`).join('');
+      <label class="weight"><span>${esc(c.label)} <b id="w-${c.id}-v">${fa(weights[c.id] ?? 0)}</b></span>
+      <input type="range" min="0" max="5" step="1" value="${weights[c.id] ?? 0}" data-weight="${c.id}"></label>`).join('');
   }
   function renderRanking() {
-    const sum = Object.values(weights).reduce((a, b) => a + b, 0);
     const rows = scored().map(p => {
-      const total = sum ? D.meta.criteria.reduce((a, c) => a + weights[c.id] * p.scores[c.id], 0) / (5 * sum) * 100 : 0;
-      return { p, total: Math.round(total) };
+      // criteria without a score for this item are left out and the item is flagged
+      const used = D.meta.criteria.filter(c => Number.isFinite(p.scores[c.id]));
+      const sum = used.reduce((a, c) => a + (weights[c.id] || 0), 0);
+      const total = sum ? used.reduce((a, c) => a + (weights[c.id] || 0) * p.scores[c.id], 0) / (5 * sum) * 100 : 0;
+      return { p, total: Math.round(total), partial: used.length < D.meta.criteria.length };
     }).sort((a, b) => b.total - a.total);
-    $('#ranking').innerHTML = rows.map(({ p, total }) => `
+    $('#ranking').innerHTML = rows.map(({ p, total, partial }) => `
       <div class="rank-row">
-        <span class="rank-name">${p.flag} ${esc(p.name)} <i class="kind ${p.type === 'work' ? 'work' : 'study'}">${p.type === 'work' ? 'کاری' : 'تحصیلی'}</i>${p.level === 'unverified' ? ' <i class="kind warn" title="بخشی از اطلاعات تأیید نشده">⚠</i>' : ''}</span>
+        <span class="rank-name">${p.flag} ${esc(p.name)} <i class="kind ${p.type === 'work' ? 'work' : 'study'}">${p.type === 'work' ? 'کاری' : 'تحصیلی'}</i>${p.level === 'unverified' || partial ? ` <i class="kind warn" title="${partial ? 'امتیاز بعضی معیارها ثبت نشده' : 'بخشی از اطلاعات تأیید نشده'}">⚠</i>` : ''}</span>
         <span class="rank-bar"><i style="--w:${total}%"></i></span>
         <b>${fa(total)}</b>
       </div>`).join('');
@@ -217,13 +228,36 @@
       </article>`).join('');
   }
 
+  function renderSynergies() {
+    const list = D.meta.synergies || [];
+    const box = $('#synergy-panel');
+    box.hidden = !list.length;
+    if (!list.length) return;
+    $('#synergy-list').innerHTML = list.map(x => `
+      <div class="syn"><div><strong>${esc(x.action)}</strong><small>${(x.impact || []).map(esc).join(' · ')}</small></div><b class="prio-${esc(String(x.priority).toLowerCase())}">${esc(x.priority)}</b></div>`).join('');
+  }
+
+  function renderPhd() {
+    const list = D.phd || [];
+    $('#phd-section').hidden = !list.length;
+    if (!list.length) return;
+    $('#phd-grid').innerHTML = list.map(p => `
+      <article class="path-card unverified">
+        <header><div><h3>${esc(p.university)}</h3><span class="level unverified">${esc(p.country)}</span></div></header>
+        <p class="verdict-line">${esc(p.field)}</p>
+        <dl class="long">${[['تأمین مالی', p.funding], ['ربط به داخلی', p.relevance_to_im], ['مهلت', p.deadline], ['زبان', p.language], ['شرایط', p.requirements]]
+          .filter(([, v]) => v).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
+        ${p.link ? `<ul class="src-list"><li><a href="${esc(p.link)}" target="_blank" rel="noopener noreferrer">صفحهٔ برنامه</a><i class="kind commercial">تأییدنشده</i></li></ul>` : ''}
+      </article>`).join('');
+  }
+
   /* ---------- tracker ---------- */
   function renderTaskControls() {
-    $('#task-cat').innerHTML = D.meta.categories.map(c => `<option value="${c.id}">${esc(c.label)}</option>`).join('');
+    $('#task-cat').innerHTML = allCats().map(c => `<option value="${c.id}">${esc(c.label)}</option>`).join('');
     renderTaskFilters();
   }
   function renderTaskFilters() {
-    const cats = [{ id: 'all', label: 'همه' }, ...D.meta.categories];
+    const cats = [{ id: 'all', label: 'همه' }, ...allCats()];
     $('#task-filters').innerHTML = cats.map(c =>
       `<button class="chip ${c.id === taskCat ? 'on' : ''}" data-task-filter="${c.id}">${esc(c.label)}</button>`).join('');
   }
@@ -407,7 +441,7 @@
   function renderAll() {
     renderDashboard();
     renderWeights(); renderRanking();
-    renderPathways(); renderStudy();
+    renderPathways(); renderStudy(); renderPhd(); renderSynergies();
     renderTaskControls(); renderTasks();
     renderBoardNote(); renderMilestones();
     renderSources();
@@ -419,7 +453,7 @@
   loadData().then(data => {
     D = data;
     settings = store.get(KEYS.settings, {});
-    weights = { ...D.meta.defaultWeights, ...store.get(KEYS.weights, {}) };
+    weights = { ...D.meta.defaultWeights, ...Object.fromEntries(Object.entries(store.get(KEYS.weights, {})).filter(([k]) => D.meta.criteria.some(c => c.id === k))) };
     initTasks();
     bindEvents();
     renderAll();

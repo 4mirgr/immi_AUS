@@ -106,6 +106,17 @@ a.badge:hover{background:var(--teal);color:#fff}
 .ms-meta{text-align:left;display:grid;gap:4px;justify-items:end}
 .ms-meta small{font-size:10px;color:var(--muted)}
 
+/* synergies */
+.syn{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.syn:first-child{border-top:0}
+.syn strong,.syn small{display:block}
+.syn strong{font-size:12px}
+.syn small{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.7}
+.syn b{font:600 9px 'DM Sans';border-radius:10px;padding:3px 10px;background:#eef2fa;color:#526e9a}
+.syn b.prio-critical{background:#ffeded;color:#b94a4a}
+.syn b.prio-high{background:#fff4dc;color:#8a6414}
+#phd-section{margin-top:34px}
+
 /* sources */
 .src-row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--line);font-size:12px}
 .src-row:first-child{border-top:0}
