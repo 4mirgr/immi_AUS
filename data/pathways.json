@@ -3,59 +3,89 @@
     "id": "aus-specialist",
     "flag": "🇦🇺",
     "type": "work",
-    "name": "استرالیا — بعد از بورد، مسیر Specialist",
+    "name": "استرالیا — مسیر Specialist (پس از بورد)",
     "status": "مسیر اصلی پیشنهادی",
     "level": "yes",
-    "summary": "کالج تخصصی مربوطه مدرک تخصصی ایران را ارزیابی می‌کند. مدرک ایران در فهرست Expedited نیست؛ در ژانویه ۲۰۲۶ فقط MRCP(UK) همراه CCT برای پزشکی عمومی اضافه شده. پس مسیر معمول Specialist را می‌روی و در این مسیر AMC MCQ ذکر نشده است.",
+    "summary": "کالج تخصصی مربوطه (مثلاً RACP) مدرک تخصصی ایران را ارزیابی می‌کند. مسیر معمول Specialist نیازمند کار تحت نظارت است و AMC MCQ در این مسیر الزامی نیست.",
     "facts": [
-      { "k": "زمان", "v": "پس از بورد (تابستان ۲۰۲۷)" },
-      { "k": "زبان", "v": "انگلیسی؛ آزمون و حد نصاب را از Ahpra بگیر" },
-      { "k": "ریسک اصلی", "v": "نتیجهٔ ارزیابی کالج قطعی نیست" }
+      { "k": "زمان", "v": "پس از دریافت بورد تخصصی ایران" },
+      { "k": "زبان", "v": "انگلیسی (OET یا IELTS) طبق الزام Ahpra" },
+      { "k": "ریسک اصلی", "v": "طولانی بودن پروسهٔ ارزیابی و یافتن موقعیت Area of Need" }
     ],
     "steps": [
-      "تأیید مدارک اولیه و تخصصی با AMC (primary source verification) و ECFMG EPIC",
-      "ارزیابی کالج: substantially / partially / not comparable",
-      "اختیاری: ارزیابی هم‌زمان برای شغل Area of Need",
-      "پیدا کردن شغل مناسب و تأیید جایگاه و نظارت توسط Medical Board",
-      "ثبت محدود یا موقت و کار تحت نظارت (۳ تا ۲۴ ماه، طبق تعیین کالج)",
-      "ثبت تخصصی پس از تأیید کالج"
+      "تأیید مدارک اولیه و تخصصی با AMC (Primary Source Verification) و ECFMG EPIC",
+      "ارسال درخواست ارزیابی به کالج تخصصی مربوطه (Substantially / Partially / Not Comparable)",
+      "جستجوی موقعیت شغلی Area of Need یا Supervised Practice",
+      "ثبت‌نام موقت (Limited Registration) و کار تحت نظارت (۳ تا ۲۴ ماه)",
+      "دریافت ثبت تخصصی (Specialist Registration) پس از تأیید نهایی کالج"
     ],
     "caveats": [
-      "نتیجهٔ ارزیابی و مدت نظارت را فقط خود کالج تعیین می‌کند.",
-      "هزینهٔ ارزیابی و الزام دقیق زبان در این جلسه تأیید نشد."
+      "نتیجهٔ ارزیابی و مدت زمان نظارت را فقط کالج مربوطه تعیین می‌کند.",
+      "رقابت برای موقعیت‌های Area of Need در شهرهای بزرگ بالاست."
     ],
     "scores": { "speed": 3, "cost": 3, "income": 5, "funded": 3, "access": 3 },
     "sources": [
-      { "title": "Medical Board of Australia — Specialist recognition", "url": "https://medicalboard.gov.au/Registration/International-Medical-Graduates/Specialist-Pathway/Specialist-recognition.aspx", "kind": "official" },
-      { "title": "Ahpra — Expedited Specialist pathway: general medicine added (29 Jan 2026)", "url": "https://www.ahpra.gov.au/News/2026-01-29-Expedited-Specialist-pathway-now-open-to-two-new-specialties.aspx", "kind": "official" }
+      { "title": "Medical Board of Australia — Specialist recognition", "url": "https://medicalboard.gov.au/Registration/International-Medical-Graduates/Specialist-Pathway/Specialist-recognition.aspx", "kind": "official" }
     ],
     "verified": "2026-10-30"
   },
   {
-    "id": "aus-standard",
-    "flag": "🇦🇺",
+    "id": "uk-gmc",
+    "flag": "🇬🇧",
     "type": "work",
-    "name": "استرالیا — مسیر استاندارد AMC، قبل یا بدون بورد",
-    "status": "ممکن، ولی طولانی‌تر",
-    "level": "partial",
-    "summary": "AMC Certificate شرط ثبت عمومی در این مسیر است و از راه آزمون‌ها (MCQ و بالینی) یا برنامه‌های Workplace-Based Assessment به دست می‌آید. تو یک بار MCQ داده‌ای و پورتفولیوی AMC فعال است.",
+    "name": "بریتانیا — ثبت GMC (مسیر PLAB/UKMLA)",
+    "status": "مسیر ساختاریافته و در دسترس",
+    "level": "yes",
+    "summary": "سریع‌ترین مسیر برای شروع کار بالینی در NHS. نیازمند گذراندن آزمون‌های PLAB 1 و 2 (یا UKMLA از ۲۰۲۴) و تأیید مدارک از طریق ECFMG EPIC است.",
     "facts": [
-      { "k": "زمان", "v": "می‌تواند پیش از بورد شروع شود" },
-      { "k": "زبان", "v": "انگلیسی (الزام Medical Board)" },
-      { "k": "ریسک اصلی", "v": "چند مرحله آزمون و هزینهٔ تکرار" }
+      { "k": "زمان", "v": "۱۲ تا ۱۸ ماه (از شروع زبان تا ثبت)" },
+      { "k": "زبان", "v": "IELTS Academic (7.5 کلی، حداقل 7 در هر بخش) یا OET (Grade B)" },
+      { "k": "ریسک اصلی", "v": "هزینهٔ آزمون‌ها و پیدا کردن اولین شغل (Trust grade) بدون تجربهٔ UK" }
     ],
     "steps": [
-      "تأیید مدارک از راه ECFMG EPIC (انجام‌شده؛ وضعیت را چک کن)",
-      "AMC MCQ (تلاش مجدد)",
-      "AMC بالینی یا WBA",
-      "ثبت عمومی از Medical Board"
+      "گذراندن آزمون زبان (IELTS/OET)",
+      "ایجاد حساب GMC Online و تأیید مدارک از طریق ECFMG EPIC",
+      "قبولی در PLAB 1 (تئوری) و PLAB 2 (عملی در منچستر)",
+      "دریافت گواهی Good Standing از سازمان نظام پزشکی ایران",
+      "ثبت‌نام کامل در GMC و شروع جستجوی شغل در NHS Jobs"
     ],
     "caveats": [
-      "ورود از این مسیر معمولاً در سطح غیرتخصصی است؛ این برداشت من است و باید با منبع رسمی تأیید شود."
+      "تخصص ایران به صورت خودکار در بریتانیا به رسمیت شناخته نمی‌شود و ممکن است نیاز به گذراندن دورهٔ CESR باشد.",
+      "هزینهٔ کلی پروسه (بدون احتساب زندگی) حدود ۵۰۰۰ تا ۷۰۰۰ پوند است."
     ],
-    "scores": { "speed": 2, "cost": 2, "income": 4, "funded": 2, "access": 3 },
+    "scores": { "speed": 4, "cost": 3, "income": 4, "funded": 3, "access": 4 },
     "sources": [
-      { "title": "WA Health — Gaining medical registration in Australia (IMG pathways)", "url": "https://www.health.wa.gov.au/Careers/International-applicants/International-medical-graduates/Gaining-medical-registration-in-Australia", "kind": "official" }
+      { "title": "GMC — Registration and licensing for international medical graduates", "url": "https://www.gmc-uk.org/registration-and-licensing/join-the-register/plab", "kind": "official" }
+    ],
+    "verified": "2026-10-30"
+  },
+  {
+    "id": "canada-pra",
+    "flag": "🇨🇦",
+    "type": "work",
+    "name": "کانادا — مسیر Practice-Ready Assessment (PRA)",
+    "status": "مسیر بلندمدت اما با ثبات بالا",
+    "level": "partial",
+    "summary": "استان‌هایی مانند بریتیش کلمبیا (BC) و نوا اسکوشیا برنامه‌های PRA دارند که به پزشکان عمومی با سابقه اجازه می‌دهد پس از یک دوره ارزیابی ۱۲ هفته‌ای، مجوز کار مستقل دریافت کنند.",
+    "facts": [
+      { "k": "زمان", "v": "۱۸ تا ۲۴ ماه (شامل پروسهٔ MCC و یافتن موقعیت PRA)" },
+      { "k": "زبان", "v": "IELTS (حداقل 7 در هر بخش) یا OET (حداقل B)" },
+      { "k": "ریسک اصلی", "v": "ظرفیت بسیار محدود برنامه‌های PRA و رقابت شدید" }
+    ],
+    "steps": [
+      "ایجاد حساب در پزشکان کانادا (Physiciansapply.ca) و تأیید مدارک",
+      "قبولی در MCCQE Part 1 و NAC Examination (OSCE)",
+      "درخواست برای برنامه‌های استانی PRA (مانند PRA-BC)",
+      "گذراندن دورهٔ ارزیابی بالینی ۱۲ هفته‌ای تحت نظارت",
+      "دریافت مجوز مستقل (Independent Practice) و اقدام برای اقامت دائم"
+    ],
+    "caveats": [
+      "این مسیر عمدتاً برای پزشکان عمومی (Family Medicine) طراحی شده است.",
+      "برای متخصصان، مسیر معمولاً تکرار رزیدنتی یا مسیرهای بسیار محدود CESR-مانند است."
+    ],
+    "scores": { "speed": 2, "cost": 2, "income": 5, "funded": 2, "access": 3 },
+    "sources": [
+      { "title": "Medical Council of Canada — Practice-Ready Assessment", "url": "https://mcc.ca/practice-ready-assessment/", "kind": "official" }
     ],
     "verified": "2026-10-30"
   },
@@ -66,70 +96,26 @@
     "name": "آلمان — Approbation",
     "status": "پشتیبان قوی، نیازمند آلمانی",
     "level": "partial",
-    "summary": "برای مدرک غیراروپایی معمولاً بررسی هم‌ارزی و در بسیاری موارد Kenntnisprüfung (آزمون شفاهی-عملی که دو بار قابل تکرار است) لازم است. زبان: آلمانی B2 و آزمون زبان پزشکی در سطح C1. با Berufserlaubnis می‌شود تحت نظارت کار کرد.",
+    "summary": "برای مدرک غیراروپایی معمولاً بررسی هم‌ارزی و در بسیاری موارد Kenntnisprüfung (آزمون شفاهی-عملی) لازم است. زبان: آلمانی B2 و آزمون زبان پزشکی در سطح C1.",
     "facts": [
-      { "k": "زبان", "v": "آلمانی B2 + Fachsprachprüfung" },
-      { "k": "ویزا", "v": "طبق یک منبع ثانویه، سفارت تهران از ۲۸ فوریه ۲۰۲۶ ویزا نمی‌دهد و پرونده‌ها از ایروان می‌روند" },
-      { "k": "ریسک اصلی", "v": "زبان، بوروکراسی ایالتی، زمان ویزا" }
+      { "k": "زبان", "v": "آلمانی B2 + Fachsprachprüfung (C1)" },
+      { "k": "ویزا", "v": "نیاز به بررسی آخرین بخشنامهٔ سفارت (احتمال انتقال پرونده به ایروان)" },
+      { "k": "ریسک اصلی", "v": "زبان، بوروکراسی ایالتی و زمان‌بر بودن شناوری مدارک" }
     ],
     "steps": [
-      "یادگیری آلمانی تا B2",
-      "درخواست بررسی هم‌ارزی مدرک نزد مرجع ایالتی",
-      "آزمون زبان پزشکی (Fachsprachprüfung)",
-      "Kenntnisprüfung در صورت نیاز",
-      "Approbation (یا Berufserlaubnis موقت تا حداکثر دو سال طبق یک بخشنامهٔ ایالتی)"
+      "یادگیری آلمانی تا سطح B2",
+      "درخواست بررسی هم‌ارزی مدرک (Gleichwertigkeitsprüfung) نزد مرجع ایالتی",
+      "گذراندن آزمون زبان تخصصی پزشکی (Fachsprachprüfung)",
+      "گذراندن Kenntnisprüfung در صورت عدم تأیید هم‌ارزی",
+      "دریافت Approbation (مجوز دائم) یا Berufserlaubnis (مجوز موقت)"
     ],
     "caveats": [
-      "خبر توقف خدمات ویزای سفارت تهران را فقط یک منبع ثانویه گفته؛ قبل از تصمیم باید با سایت رسمی سفارت تطبیق داده شود.",
-      "قواعد هر ایالت متفاوت است."
+      "قواعد و سرعت پردازش در هر ایالت (Bundesland) کاملاً متفاوت است.",
+      "هزینهٔ زندگی در دوران آمادگی برای آزمون‌ها باید تأمین شود."
     ],
     "scores": { "speed": 2, "cost": 3, "income": 4, "funded": 3, "access": 2 },
     "sources": [
-      { "title": "Expatrio — How to work as a doctor in Germany (2026)", "url": "https://www.expatrio.com/about-germany/doctors-germany-approbation-licensing", "kind": "commercial" },
-      { "title": "Ärzteblatt — Approbation für Ärzte aus Drittstaaten", "url": "https://aerztestellen.aerzteblatt.de/de/redaktion/deutschland-aerzte-approbation-drittstaaten", "kind": "secondary" },
-      { "title": "Iran → Germany skilled worker guide 2026 (منبع ثانویه، نیازمند تأیید)", "url": "https://immigrationstartguide.com/blog/iran-to-germany-skilled-worker-visa-guide-2026", "kind": "secondary" }
-    ],
-    "verified": "2026-10-30"
-  },
-  {
-    "id": "uk",
-    "flag": "🇬🇧",
-    "type": "work",
-    "name": "بریتانیا — PLAB و ثبت GMC",
-    "status": "گزینهٔ سوم",
-    "level": "partial",
-    "summary": "PLAB 1 (۱۸۰ سؤال) و PLAB 2 (OSCE، فقط منچستر). حد نصاب زبان بالا است: IELTS Academic کل ۷٫۵ و حداقل ۷ در هر بخش، یا OET Medicine سطح B در همه بخش‌ها.",
-    "facts": [
-      { "k": "زبان", "v": "IELTS 7.5/7.0 یا OET B" },
-      { "k": "شرط", "v": "حداقل ۱۲ ماه اینترنی با ۳ ماه داخلی و ۳ ماه جراحی" },
-      { "k": "ریسک اصلی", "v": "ویزا و ورود برای پاسپورت ایران بررسی نشده" }
-    ],
-    "steps": ["حساب GMC Online و تأیید مدارک", "نمرهٔ OET/IELTS", "PLAB 1", "PLAB 2 در منچستر", "ثبت GMC و کار در NHS"],
-    "caveats": ["شرایط ورود به بریتانیا برای ایرانیان در این جلسه بررسی نشد."],
-    "scores": { "speed": 3, "cost": 2, "income": 3, "funded": 2, "access": 2 },
-    "sources": [
-      { "title": "Yocket — What is the PLAB exam", "url": "https://yocket.com/blog/what-is-the-plab-exam", "kind": "commercial" }
-    ],
-    "verified": "2026-10-30"
-  },
-  {
-    "id": "canada",
-    "flag": "🇨🇦",
-    "type": "work",
-    "name": "کانادا — MCCQE، NAC OSCE و CaRMS",
-    "status": "بلندمدت و رقابتی",
-    "level": "no",
-    "summary": "بدون رزیدنسی کانادایی طبابت مستقل ممکن نیست. در دور ۲۰۲۲ فقط حدود ۳۳٪ متقاضیان IMG (۴۳۹ از ۱۳۲۲) مچ شدند.",
-    "facts": [
-      { "k": "زمان", "v": "چند سال" },
-      { "k": "مزیت", "v": "رزیدنسی حقوق‌بگیر و مسیر اقامت" },
-      { "k": "ریسک اصلی", "v": "ظرفیت کم IMG" }
-    ],
-    "steps": ["تأیید مدارک در physiciansapply.ca", "MCCQE", "NAC OSCE", "مچ CaRMS", "رزیدنسی و پروانهٔ استانی"],
-    "caveats": ["عدد ۳۳٪ مربوط به دور ۲۰۲۲ است."],
-    "scores": { "speed": 1, "cost": 2, "income": 4, "funded": 3, "access": 2 },
-    "sources": [
-      { "title": "Royal College — IMG learners in Canadian residency", "url": "https://pdhandbook.royalcollege.ca/3064/", "kind": "official" }
+      { "title": "Make it in Germany — Recognition of medical professions", "url": "https://www.make-it-in-germany.com/en/qualification-recognition/regulated-professions/doctor", "kind": "official" }
     ],
     "verified": "2026-10-30"
   },
@@ -138,18 +124,18 @@
     "flag": "🇺🇸",
     "type": "work",
     "name": "آمریکا — USMLE و رزیدنسی",
-    "status": "فعلاً بسته",
+    "status": "فعلاً بسته / پرریسک",
     "level": "no",
-    "summary": "Proclamation 10998 از ۱ ژانویه ۲۰۲۶ صدور همهٔ ویزاهای مهاجرتی و غیرمهاجرتی (از جمله J-1) را برای تابعیت ایران معلق کرده است. منبع، استثنای ویژهٔ پزشکان را ذکر نمی‌کند.",
+    "summary": "محدودیت‌های صدور ویزا برای اتباع ایرانی (شامل ویزاهای J-1 و H-1B) همچنان پابرجاست و ریسک سرمایه‌گذاری زمانی و مالی را بسیار بالا می‌برد.",
     "facts": [
-      { "k": "وضعیت", "v": "تعلیق بدون تاریخ پایان؛ بازبینی هر ۱۸۰ روز" },
-      { "k": "استثنا", "v": "فقط موارد خاص، مثلاً دوتابعیتی با پاسپورت غیرایرانی" }
+      { "k": "وضعیت", "v": "تعلیق یا تأخیرهای شدید در صدور ویزا" },
+      { "k": "استثنا", "v": "فقط موارد خاص (مانند دوتابعیتی‌ها با پاسپورت معتبر غیرایرانی)" }
     ],
-    "steps": ["تا تغییر وضعیت، سرمایه‌گذاری روی این مسیر توصیه نمی‌شود"],
-    "caveats": ["منبع یک سایت حقوقی تجاری است؛ متن رسمی اعلامیه را هم بخوان."],
+    "steps": ["تا تغییر وضعیت سیاسی/ویزایی، سرمایه‌گذاری روی این مسیر توصیه نمی‌شود."],
+    "caveats": ["قوانین مهاجرتی آمریکا به سرعت تغییر می‌کند؛ همیشه سایت وزارت خارجه (travel.state.gov) را چک کنید."],
     "scores": { "speed": 1, "cost": 1, "income": 5, "funded": 4, "access": 1 },
     "sources": [
-      { "title": "Alma — Iran travel ban, Proclamation 10998", "url": "https://www.tryalma.com/learn/iran-travel-ban-visas-iranian-nationals", "kind": "commercial" }
+      { "title": "US Department of State — Visa Services", "url": "https://travel.state.gov/content/travel/en/us-visas.html", "kind": "official" }
     ],
     "verified": "2026-10-30"
   }
