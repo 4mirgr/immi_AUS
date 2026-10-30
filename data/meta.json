@@ -1,24 +1,38 @@
 {
-  "version": "2026-10-30.2",
+  "version": "2026-10-30.3",
   "lastVerified": "2026-10-30",
   "staleAfterDays": 30,
   "boardDateDefault": "2027-07-01",
-  "boardDateNote": "تاریخ دقیق بورد را از دانشگاه/هیئت ممتحنه بگیر و در بخش تقویم وارد کن؛ این مقدار فقط حدسی است.",
   "criteria": [
     { "id": "speed", "label": "سرعت" },
     { "id": "cost", "label": "هزینهٔ کم" },
-    { "id": "income", "label": "درآمد" },
-    { "id": "funded", "label": "تأمین مالی در مسیر" },
+    { "id": "income", "label": "درآمد/فاند" },
+    { "id": "clinical_practice", "label": "امکان کار بالینی" },
     { "id": "access", "label": "دسترسی با پاسپورت ایران" }
   ],
-  "defaultWeights": { "speed": 4, "cost": 2, "income": 4, "funded": 4, "access": 5 },
+  "defaultWeights": { "speed": 3, "cost": 3, "income": 4, "clinical_practice": 5, "access": 4 },
   "categories": [
-    { "id": "exam", "label": "بورد" },
+    { "id": "exam", "label": "آزمون‌ها" },
     { "id": "language", "label": "زبان" },
-    { "id": "credentials", "label": "مدارک" },
-    { "id": "pathway", "label": "مسیر کاری" },
-    { "id": "study", "label": "تحصیل" },
-    { "id": "brand", "label": "برند و شبکه" },
+    { "id": "credentials", "label": "مدارک و تأییدیه‌ها" },
+    { "id": "research", "label": "پژوهش و انتشارات" },
     { "id": "networking", "label": "شبکه‌سازی" }
+  ],
+  "synergies": [
+    {
+      "action": "گرفتن نمره IELTS/OET",
+      "impact": ["استرالیا (بالینی)", "ایتالیا (PhD)", "آلمان (در صورت نیاز به انگلیسی برای پژوهش)"],
+      "priority": "Critical"
+    },
+    {
+      "action": "گذراندن دوره GCP (NIH)",
+      "impact": ["تقویت CV برای PhD", "الزامی برای تحقیقات بالینی در استرالیا/اروپا"],
+      "priority": "High"
+    },
+    {
+      "action": "تأیید مدارک در ECFMG EPIC",
+      "impact": ["استرالیا (AMC)", "پژوهش‌های بین‌المللی", "اعتبار جهانی مدرک"],
+      "priority": "High"
+    }
   ]
 }
