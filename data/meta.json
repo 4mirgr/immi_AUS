@@ -1,0 +1,23 @@
+{
+  "version": "2026-10-30.1",
+  "lastVerified": "2026-10-30",
+  "staleAfterDays": 30,
+  "boardDateDefault": "2027-07-01",
+  "boardDateNote": "تاریخ دقیق بورد را از دانشگاه/هیئت ممتحنه بگیر و در بخش تقویم وارد کن؛ این مقدار فقط حدسی است.",
+  "criteria": [
+    { "id": "speed", "label": "سرعت" },
+    { "id": "cost", "label": "هزینهٔ کم" },
+    { "id": "income", "label": "درآمد" },
+    { "id": "funded", "label": "تأمین مالی در مسیر" },
+    { "id": "access", "label": "دسترسی با پاسپورت ایران" }
+  ],
+  "defaultWeights": { "speed": 4, "cost": 2, "income": 4, "funded": 4, "access": 5 },
+  "categories": [
+    { "id": "exam", "label": "بورد" },
+    { "id": "language", "label": "زبان" },
+    { "id": "credentials", "label": "مدارک" },
+    { "id": "pathway", "label": "مسیر کاری" },
+    { "id": "study", "label": "تحصیل" },
+    { "id": "brand", "label": "برند و شبکه" }
+  ]
+}

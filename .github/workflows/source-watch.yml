@@ -1,0 +1,39 @@
+name: Watch sources
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check sources
+        run: node scripts/check-sources.mjs
+      - name: Commit status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/source-status.json
+          git diff --cached --quiet || (git commit -m "chore: update source status" && git push)
+      - name: Open or update issue
+        if: hashFiles('source-report.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create source-watch --color 0c8279 --description "Source changed or unreachable" 2>/dev/null || true
+          existing=$(gh issue list --label source-watch --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file source-report.md
+          else
+            gh issue create --title "منابع مهاجرت نیاز به بررسی دارند" --label source-watch --body-file source-report.md
+          fi
