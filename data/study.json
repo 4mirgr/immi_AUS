@@ -18,10 +18,25 @@
       "محدودیت ملیت در صفحهٔ UTS نیامده، اما سیاست ویزا و بررسی امنیتی برای ایرانیان بررسی نشد."
     ],
     "next": "فهرست ۱۰ گروه پژوهشی، ایمیل به استاد راهنما پیش از درخواست رسمی، و تکمیل سابقهٔ پژوهشی",
-    "scores": { "speed": 3, "cost": 5, "income": 3, "funded": 5, "access": 3 },
+    "scores": {
+      "speed": 3,
+      "cost": 5,
+      "income": 3,
+      "funded": 5,
+      "access": 3,
+      "clinical_practice": 1
+    },
     "sources": [
-      { "title": "UTS — International Research Training Program Scholarship (IRTP)", "url": "https://www.uts.edu.au/scholarship/international-research-training-program-scholarship-irtp", "kind": "official" },
-      { "title": "DiscoverPhDs — PhD in Australia 2026 (به‌روزرسانی ۲۸ مه ۲۰۲۶)", "url": "https://www.discoverphds.com/?p=32730", "kind": "commercial" }
+      {
+        "title": "UTS — International Research Training Program Scholarship (IRTP)",
+        "url": "https://www.uts.edu.au/scholarship/international-research-training-program-scholarship-irtp",
+        "kind": "official"
+      },
+      {
+        "title": "DiscoverPhDs — PhD in Australia 2026 (به‌روزرسانی ۲۸ مه ۲۰۲۶)",
+        "url": "https://www.discoverphds.com/?p=32730",
+        "kind": "commercial"
+      }
     ],
     "verified": "2026-10-30"
   },
@@ -43,10 +58,25 @@
       "تخصص پزشکی ایتالیا زیر این بورسیه نمی‌آید."
     ],
     "next": "پورتال Study in Italy را برای فهرست کشورها و اعلام دور ۲۰۲۷/۲۸ پیگیری کن",
-    "scores": { "speed": 4, "cost": 4, "income": 1, "funded": 3, "access": 4 },
+    "scores": {
+      "speed": 4,
+      "cost": 4,
+      "income": 1,
+      "funded": 3,
+      "access": 4,
+      "clinical_practice": 1
+    },
     "sources": [
-      { "title": "esteri.it — فراخوان بورسیه‌های دولت ایتالیا ۲۰۲۶/۲۷ (PDF)", "url": "https://www.esteri.it/wp-content/uploads/2026/03/Bando-26-27-ITA.pdf", "kind": "official" },
-      { "title": "esteri.it — Scholarships for foreign students", "url": "https://www.esteri.it/en/servizi-opportunita/opportunita/borse-di-studio/per-cittadini-stranieri/borsestudio_stranieri/", "kind": "official" }
+      {
+        "title": "esteri.it — فراخوان بورسیه‌های دولت ایتالیا ۲۰۲۶/۲۷ (PDF)",
+        "url": "https://www.esteri.it/wp-content/uploads/2026/03/Bando-26-27-ITA.pdf",
+        "kind": "official"
+      },
+      {
+        "title": "esteri.it — Scholarships for foreign students",
+        "url": "https://www.esteri.it/en/servizi-opportunita/opportunita/borse-di-studio/per-cittadini-stranieri/borsestudio_stranieri/",
+        "kind": "official"
+      }
     ],
     "verified": "2026-10-30"
   },
@@ -68,10 +98,25 @@
       "درآمد پزشک در ایتالیا را در این جلسه با منبع مستقل بررسی نکردم."
     ],
     "next": "آخرین bando را بخوان و از Uni-Italia تهران بپرس: soprannumero، حقوق، C1 و احتساب رزیدنتی ایران",
-    "scores": { "speed": 2, "cost": 3, "income": 2, "funded": 2, "access": 3 },
+    "scores": {
+      "speed": 2,
+      "cost": 3,
+      "income": 2,
+      "funded": 2,
+      "access": 3,
+      "clinical_practice": 4
+    },
     "sources": [
-      { "title": "Unibo — Come candidarsi a una scuola di specializzazione dell'Area Medica", "url": "https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/scuole-di-specializzazione/come-candidarsi-a-una-scuola-di-specializzazione-dellarea-medica", "kind": "official" },
-      { "title": "MUR — ۱۵٬۲۲۱ جای تخصص پزشکی (۱۶ سپتامبر ۲۰۲۶)", "url": "https://www.mur.gov.it/it/news/mercoledi-16092026/universita-mur-sono-15221-i-posti-disponibili-le-specializzazioni-mediche", "kind": "official" }
+      {
+        "title": "Unibo — Come candidarsi a una scuola di specializzazione dell'Area Medica",
+        "url": "https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/scuole-di-specializzazione/come-candidarsi-a-una-scuola-di-specializzazione-dellarea-medica",
+        "kind": "official"
+      },
+      {
+        "title": "MUR — ۱۵٬۲۲۱ جای تخصص پزشکی (۱۶ سپتامبر ۲۰۲۶)",
+        "url": "https://www.mur.gov.it/it/news/mercoledi-16092026/universita-mur-sono-15221-i-posti-disponibili-le-specializzazioni-mediche",
+        "kind": "official"
+      }
     ],
     "verified": "2026-10-30"
   },
@@ -88,11 +133,24 @@
     "deadline": "نمونهٔ پادوا: ۳۰ سپتامبر ۲۰۲۶. سال اولی‌ها باید ۲۰ ECTS کسب کنند",
     "language": "طبق برنامهٔ پذیرفته‌شده",
     "relevance": "کسی که مدرک هم‌سطح یا بالاتر از دورهٔ مقصد دارد حذف می‌شود. با MD تو (هم‌سطح Master)، Master احتمالاً ردی دارد و PhD منطقی‌تر است. این استنباط من است و باید با نهاد DSU منطقه تأیید شود. دورهٔ تخصص پزشکی هم در فهرست دورهٔ این صفحه نیست",
-    "caveats": ["هر منطقه و دانشگاه قواعد خودش را دارد."],
+    "caveats": [
+      "هر منطقه و دانشگاه قواعد خودش را دارد."
+    ],
     "next": "پس از پیدا کردن دانشگاه، فراخوان DSU همان منطقه را بخوان",
-    "scores": { "speed": 3, "cost": 4, "income": 1, "funded": 3, "access": 3 },
+    "scores": {
+      "speed": 3,
+      "cost": 4,
+      "income": 1,
+      "funded": 3,
+      "access": 3,
+      "clinical_practice": 1
+    },
     "sources": [
-      { "title": "Università di Padova — Regional scholarships", "url": "https://www.unipd.it/en/borse-studio-regionali", "kind": "official" }
+      {
+        "title": "Università di Padova — Regional scholarships",
+        "url": "https://www.unipd.it/en/borse-studio-regionali",
+        "kind": "official"
+      }
     ],
     "verified": "2026-10-30"
   },
@@ -109,11 +167,17 @@
     "deadline": "نوبت‌ها در ۲۰۲۶ از ۸ ژوئیه شروع شد؛ برای دور بعد اطلاعیهٔ تازه را ببین",
     "language": "—",
     "relevance": "دفتر Uni-Italia تهران (در مدرسهٔ ایتالیایی Pietro della Valle) دربارهٔ رشته‌ها و بورسیه‌ها راهنمایی می‌کند: iran@uni-italia.it",
-    "caveats": ["اطلاعیهٔ سفارت مربوط به سال ۲۰۲۶/۲۷ است و ممکن است عوض شود."],
+    "caveats": [
+      "اطلاعیهٔ سفارت مربوط به سال ۲۰۲۶/۲۷ است و ممکن است عوض شود."
+    ],
     "next": "ایمیل به Uni-Italia تهران",
     "scores": null,
     "sources": [
-      { "title": "سفارت ایتالیا در تهران — اطلاعیهٔ ویزای تحصیلی ۲۰۲۶/۲۷", "url": "https://ambteheran.esteri.it/fa/?p=4368", "kind": "official" }
+      {
+        "title": "سفارت ایتالیا در تهران — اطلاعیهٔ ویزای تحصیلی ۲۰۲۶/۲۷",
+        "url": "https://ambteheran.esteri.it/fa/?p=4368",
+        "kind": "official"
+      }
     ],
     "verified": "2026-10-30"
   }
