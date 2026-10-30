@@ -1,0 +1,184 @@
+[
+  {
+    "id": "au-rtp",
+    "flag": "🇦🇺",
+    "country": "استرالیا",
+    "type": "study",
+    "name": "بورسیهٔ دولتی IRTP/RTP برای PhD یا Research Master",
+    "level": "yes",
+    "verdict": "تنها مسیر واقعاً فول‌فاند تأییدشده",
+    "funded": "شهریه (تا ۳٫۵ سال PhD یا ۲ سال Research Master) + حقوق بدون مالیات ۳۹٬۰۰۰ دلار استرالیا در سال (نمونهٔ UTS از ۱ ژانویه ۲۰۲۶) + بیمهٔ OSHC",
+    "who": "دانشجوی جدید بین‌المللی تحقیقاتی با سابقهٔ تحصیلی درخشان و پتانسیل پژوهشی؛ دریافت جایزهٔ مشابه دیگر مجاز نیست",
+    "deadline": "هر دانشگاه فرق دارد. نمونه: UTS برای دور ۲۰۲۷ از ۴ مه تا ۳ ژوئن ۲۰۲۶ بود",
+    "language": "سطح زبان را هر دانشگاه تعیین می‌کند؛ بررسی نشد",
+    "relevance": "پژوهش بالینی یا سلامت عمومی در بیمارستان‌های وابسته می‌تواند شبکه، درآمد و تجربهٔ محلی بسازد. ویزای دانشجویی (subclass 500) برای دکترا معمولاً سقف ۴۸ ساعت کار را ندارد و پس از PhD ویزای 485 تا ۳ سال کار آزاد می‌دهد (منبع تجاری).",
+    "caveats": [
+      "PhD ثبت پزشکی (Ahpra) نمی‌دهد؛ مسیر طبابت جداست.",
+      "رقابتی است و بدون مقاله و سابقهٔ پژوهشی شانس کم می‌شود.",
+      "محدودیت ملیت در صفحهٔ UTS نیامده، اما سیاست ویزا و بررسی امنیتی برای ایرانیان بررسی نشد."
+    ],
+    "next": "فهرست ۱۰ گروه پژوهشی، ایمیل به استاد راهنما پیش از درخواست رسمی، و تکمیل سابقهٔ پژوهشی",
+    "scores": {
+      "speed": 3,
+      "cost": 5,
+      "income": 3,
+      "funded": 5,
+      "access": 3,
+      "clinical_practice": 1
+    },
+    "sources": [
+      {
+        "title": "UTS — International Research Training Program Scholarship (IRTP)",
+        "url": "https://www.uts.edu.au/scholarship/international-research-training-program-scholarship-irtp",
+        "kind": "official"
+      },
+      {
+        "title": "DiscoverPhDs — PhD in Australia 2026 (به‌روزرسانی ۲۸ مه ۲۰۲۶)",
+        "url": "https://www.discoverphds.com/?p=32730",
+        "kind": "commercial"
+      }
+    ],
+    "verified": "2026-10-30"
+  },
+  {
+    "id": "it-maeci",
+    "flag": "🇮🇹",
+    "country": "ایتالیا",
+    "type": "study",
+    "name": "بورسیهٔ دولت ایتالیا (MAECI) — Master، PhD، پژوهش",
+    "level": "partial",
+    "verdict": "کمک‌هزینه است، نه پوشش کامل؛ پزشکی و تخصص را شامل نمی‌شود",
+    "funded": "۱۰٬۸۰۰ یورو برای کل ۹ ماه، در سه قسط (۵٬۵۰۰ + ۲٬۳۰۰ + ۳٬۰۰۰) + بیمهٔ گروهی. معافیت شهریه به دانشگاه بستگی دارد و مالیات منطقه‌ای با خود دانشجوست",
+    "who": "فهرست کشورها براساس تابعیت در پورتال Study in Italy است؛ نام ایران در متن فراخوان نیامده و باید همان‌جا چک شود",
+    "deadline": "دور ۲۰۲۶/۲۷ در ۲۶ مارس ۲۰۲۶ بسته شد. دور بعد هنوز اعلام نشده",
+    "language": "Master: ایتالیایی یا انگلیسی B2. PhD و پژوهش: گواهی لازم نیست",
+    "relevance": "برای مسیر غیربالینی (مثلاً سلامت عمومی، مدیریت سلامت، علوم زیستی) یا PhD مناسب است. فراخوان صراحتاً Master تک‌مرحله‌ای (مثل پزشکی) و دوره‌های specialization را کنار می‌گذارد.",
+    "caveats": [
+      "مبلغ برای زندگی کامل کافی بودنش را با هزینهٔ شهر مقصد خودت بسنج.",
+      "تخصص پزشکی ایتالیا زیر این بورسیه نمی‌آید."
+    ],
+    "next": "پورتال Study in Italy را برای فهرست کشورها و اعلام دور ۲۰۲۷/۲۸ پیگیری کن",
+    "scores": {
+      "speed": 4,
+      "cost": 4,
+      "income": 1,
+      "funded": 3,
+      "access": 4,
+      "clinical_practice": 1
+    },
+    "sources": [
+      {
+        "title": "esteri.it — فراخوان بورسیه‌های دولت ایتالیا ۲۰۲۶/۲۷ (PDF)",
+        "url": "https://www.esteri.it/wp-content/uploads/2026/03/Bando-26-27-ITA.pdf",
+        "kind": "official"
+      },
+      {
+        "title": "esteri.it — Scholarships for foreign students",
+        "url": "https://www.esteri.it/en/servizi-opportunita/opportunita/borse-di-studio/per-cittadini-stranieri/borsestudio_stranieri/",
+        "kind": "official"
+      }
+    ],
+    "verified": "2026-10-30"
+  },
+  {
+    "id": "it-ssm",
+    "flag": "🇮🇹",
+    "country": "ایتالیا",
+    "type": "study",
+    "name": "تخصص پزشکی ایتالیا — Scuole di specializzazione",
+    "level": "unverified",
+    "verdict": "نزدیک‌ترین مسیر به طبابت، اما حقوق و ظرفیت برای پزشک غیراروپایی تأیید نشد",
+    "funded": "قرارداد آموزشی پولی وجود دارد (در دور اخیر ۱۵٬۲۲۱ قرارداد)، ولی صفحهٔ Unibo رقم حقوق را نداده و برای صندلی‌های «سوپراننومرری» ویژهٔ پزشکان غیراروپایی هیچ‌چیز دربارهٔ حقوق نگفته. باید در bando بخوانی",
+    "who": "پزشک با مدرک خارجی می‌تواند شرکت کند. مدرک باید با ترجمه، مهر و Declaration of Value از نمایندگی ایتالیا و پروانهٔ طبابت یا حکم تأیید وزارت بهداشت ایتالیا ثبت شود",
+    "deadline": "آزمون ملی، دور اخیر ۲۱ ژوئیه ۲۰۲۶ در بولونیا. دور بعد را از Universitaly و MUR پیگیری کن",
+    "language": "پزشک غیراروپایی پذیرفته‌شده در صندلی‌های ویژه باید تا شروع کلاس‌ها ایتالیایی C1 داشته باشد",
+    "relevance": "تخصص ایتالیا چند سال طول می‌کشد؛ هنوز معلوم نیست رزیدنتی چهارساله‌ات (یا بورد ایران) چیزی از آن را کم می‌کند یا نه",
+    "caveats": [
+      "نتیجهٔ آزمون رقابتی ملی است و C1 ایتالیایی مانع اصلی است.",
+      "درآمد پزشک در ایتالیا را در این جلسه با منبع مستقل بررسی نکردم."
+    ],
+    "next": "آخرین bando را بخوان و از Uni-Italia تهران بپرس: soprannumero، حقوق، C1 و احتساب رزیدنتی ایران",
+    "scores": {
+      "speed": 2,
+      "cost": 3,
+      "income": 2,
+      "funded": 2,
+      "access": 3,
+      "clinical_practice": 4
+    },
+    "sources": [
+      {
+        "title": "Unibo — Come candidarsi a una scuola di specializzazione dell'Area Medica",
+        "url": "https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/scuole-di-specializzazione/come-candidarsi-a-una-scuola-di-specializzazione-dellarea-medica",
+        "kind": "official"
+      },
+      {
+        "title": "MUR — ۱۵٬۲۲۱ جای تخصص پزشکی (۱۶ سپتامبر ۲۰۲۶)",
+        "url": "https://www.mur.gov.it/it/news/mercoledi-16092026/universita-mur-sono-15221-i-posti-disponibili-le-specializzazioni-mediche",
+        "kind": "official"
+      }
+    ],
+    "verified": "2026-10-30"
+  },
+  {
+    "id": "it-dsu",
+    "flag": "🇮🇹",
+    "country": "ایتالیا",
+    "type": "study",
+    "name": "بورسیهٔ منطقه‌ای DSU (پول نقد + خوابگاه و غذا)",
+    "level": "partial",
+    "verdict": "پس از پذیرش در دانشگاه؛ احتمالاً فقط برای PhD به تو می‌رسد",
+    "funded": "بخشی نقدی و بخشی خدمات (اقامت و غذا). مبلغ در صفحهٔ دانشگاه پادوا نیامده؛ در فراخوان ببین",
+    "who": "نمونهٔ پادوا: Bachelor، Master، Master تک‌مرحله‌ای و PhD بدون بورسیهٔ دیگر؛ سقف ISEE ۲۶٬۳۰۶٫۲۵ یورو و ISPE ۴۳٬۱۲۵٫۹۴ یورو. خانوارهای خارج از ایتالیا باید ISEE Parificato از CAF وابسته به دانشگاه بگیرند",
+    "deadline": "نمونهٔ پادوا: ۳۰ سپتامبر ۲۰۲۶. سال اولی‌ها باید ۲۰ ECTS کسب کنند",
+    "language": "طبق برنامهٔ پذیرفته‌شده",
+    "relevance": "کسی که مدرک هم‌سطح یا بالاتر از دورهٔ مقصد دارد حذف می‌شود. با MD تو (هم‌سطح Master)، Master احتمالاً ردی دارد و PhD منطقی‌تر است. این استنباط من است و باید با نهاد DSU منطقه تأیید شود. دورهٔ تخصص پزشکی هم در فهرست دورهٔ این صفحه نیست",
+    "caveats": [
+      "هر منطقه و دانشگاه قواعد خودش را دارد."
+    ],
+    "next": "پس از پیدا کردن دانشگاه، فراخوان DSU همان منطقه را بخوان",
+    "scores": {
+      "speed": 3,
+      "cost": 4,
+      "income": 1,
+      "funded": 3,
+      "access": 3,
+      "clinical_practice": 1
+    },
+    "sources": [
+      {
+        "title": "Università di Padova — Regional scholarships",
+        "url": "https://www.unipd.it/en/borse-studio-regionali",
+        "kind": "official"
+      }
+    ],
+    "verified": "2026-10-30"
+  },
+  {
+    "id": "it-logistics",
+    "flag": "🇮🇹",
+    "country": "ایتالیا",
+    "type": "logistics",
+    "name": "ویزای تحصیلی ایتالیا از تهران",
+    "level": "yes",
+    "verdict": "از نظر لجستیک واقعاً ساده‌تر از چند مقصد دیگر",
+    "funded": "—",
+    "who": "برای سال ۲۰۲۶/۲۷ سفارت ایتالیا در تهران ویزای تحصیلی را از طریق VisaMetric تهران پردازش می‌کرد: pre-enrolment در Universitaly، سپس ایمیل نوبت از VisaMetric. گواهی CIMEA می‌تواند جای Declaration of Value را بگیرد",
+    "deadline": "نوبت‌ها در ۲۰۲۶ از ۸ ژوئیه شروع شد؛ برای دور بعد اطلاعیهٔ تازه را ببین",
+    "language": "—",
+    "relevance": "دفتر Uni-Italia تهران (در مدرسهٔ ایتالیایی Pietro della Valle) دربارهٔ رشته‌ها و بورسیه‌ها راهنمایی می‌کند: iran@uni-italia.it",
+    "caveats": [
+      "اطلاعیهٔ سفارت مربوط به سال ۲۰۲۶/۲۷ است و ممکن است عوض شود."
+    ],
+    "next": "ایمیل به Uni-Italia تهران",
+    "scores": null,
+    "sources": [
+      {
+        "title": "سفارت ایتالیا در تهران — اطلاعیهٔ ویزای تحصیلی ۲۰۲۶/۲۷",
+        "url": "https://ambteheran.esteri.it/fa/?p=4368",
+        "kind": "official"
+      }
+    ],
+    "verified": "2026-10-30"
+  }
+]
