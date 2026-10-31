@@ -85,6 +85,10 @@
       const r = await fetch('data/phd-opportunities.json', { cache: 'no-cache' });
       if (r.ok) out.phd = await r.json();
     } catch { /* optional */ }
+    try {
+      const r = await fetch('data/australia_pathways.json', { cache: 'no-cache' });
+      if (r.ok) out.australia = await r.json();
+    } catch { /* optional */ }
     return out;
   }
 
@@ -449,6 +453,62 @@
     } else box.hidden = true;
   }
 
+
+  /* ---------- Australia career pathways ---------- */
+  function renderAustraliaPathways() {
+    const A = D.australia;
+    if (!A) return;
+    const strategy = A.personalized_strategy || {};
+    const priorities = strategy.priority_order || [];
+    $('#aus-strategy').innerHTML = `
+      <p class="aus-north-star">${esc(strategy.north_star || '')}</p>
+      <div class="aus-priority-grid">${priorities.map(p => `
+        <article><b>${fa(p.rank)} · ${esc(p.track)}</b><p>${esc(p.why || '')}</p>
+          ${p.target_roles ? `<small>نقش‌های هدف: ${p.target_roles.map(esc).join(' · ')}</small>` : ''}
+          ${p.near_term_actions ? `<ul>${p.near_term_actions.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+        </article>`).join('')}</div>
+      <div class="aus-weekly"><b>زمان پیشنهادی:</b> ${esc(strategy.weekly_time_allocation?.suggested_hours || 'قابل تنظیم')}</div>
+    `;
+
+    const groups = A.pathway_groups || [];
+    $('#aus-groups').innerHTML = groups.map(group => `
+      <section class="aus-group">
+        <header><span class="kicker">PATHWAY GROUP</span><h3>${esc(group.name)}</h3><p>${esc(group.description || '')}</p></header>
+        <div class="aus-path-grid">${(group.pathways || []).map(p => {
+          const roles = p.possible_roles || [];
+          const skills = p.skills_to_build || [];
+          const projects = p.portfolio_projects || [];
+          const steps = p.typical_steps || [];
+          const risks = p.key_uncertainties || [];
+          const sources = p.official_sources || [];
+          return `<article class="aus-path-card">
+            <h4>${esc(p.title)}</h4><p>${esc(p.summary || '')}</p>
+            ${roles.length ? `<div><b>نقش‌های احتمالی</b><p>${roles.map(esc).join(' · ')}</p></div>` : ''}
+            ${skills.length ? `<div><b>مهارت‌ها</b><ul>${skills.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+            ${projects.length ? `<div><b>پروژه‌های نمونه</b><ul>${projects.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+            ${steps.length ? `<details><summary>مراحل معمول</summary><ol>${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol></details>` : ''}
+            ${p.iran_specific_evidence ? `<details><summary>مدارک مرتبط با بورد ایران</summary><ul>${p.iran_specific_evidence.map(x => `<li>${esc(x)}</li>`).join('')}</ul></details>` : ''}
+            ${risks.length ? `<details><summary>ریسک‌ها و ابهام‌ها</summary><ul>${risks.map(x => `<li>${esc(x)}</li>`).join('')}</ul></details>` : ''}
+            ${sources.length ? `<div class="aus-sources"><b>منابع رسمی</b>${sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`).join('')}</div>` : ''}
+            <small class="aus-verification">${esc(p.verification_status || 'نیازمند بررسی موردی')}</small>
+          </article>`;
+        }).join('')}</div>
+      </section>`).join('');
+
+    $('#aus-study-ladder').innerHTML = (A.personalized_strategy?.priority_order?.find(p => p.rank === 4)?.options || []).map(x =>
+      `<article><b>${esc(x.level)}</b><p>${esc(x.best_for)}</p><small>${(x.examples || []).map(esc).join(' · ')}</small></article>`).join('');
+
+    $('#aus-12weeks').innerHTML = (strategy.first_12_weeks || []).map(w =>
+      `<article><b>${esc(w.weeks)}</b><h4>${esc(w.focus)}</h4><ul>${(w.deliverables || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></article>`).join('');
+
+    const visa = A.visa_and_migration_checklist || {};
+    $('#aus-visa-rule').textContent = visa.rule || '';
+    $('#aus-visas').innerHTML = (visa.visa_families_to_review || []).map(v =>
+      `<a href="${esc(v.official_url)}" target="_blank" rel="noopener noreferrer"><b>${esc(v.subclass)}</b> ${esc(v.name)}</a>`).join('');
+    $('#aus-visa-checks').innerHTML = (visa.required_checks || []).map(x => `<li>${esc(x)}</li>`).join('');
+    $('#aus-board-evidence').innerHTML = (A.iranian_specialist_training_profile?.fields_to_track || []).map(x => `<li>${esc(x.replaceAll('_',' '))}</li>`).join('');
+  }
+
   /* ---------- events ---------- */
   function bindEvents() {
     document.addEventListener('change', e => {
@@ -568,6 +628,7 @@
     renderTaskControls(); renderTasks();
     renderBoardNote(); renderMilestones();
     renderSources();
+    renderAustraliaPathways();
   }
 
   /* ---------- boot ---------- */
