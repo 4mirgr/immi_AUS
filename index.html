@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="پنل حرفه‌ای مسیر مهاجرت پزشکی و برند شخصی دکتر امیر هوشنگ گرامی" />
+  <title>MedPath — پنل مهاجرت و برند حرفه‌ای</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <aside class="sidebar" aria-label="منوی اصلی">
+    <a class="brand" href="#dashboard"><span class="brand-mark">M</span><span>MedPath<small>Career Command Center</small></span></a>
+    <nav>
+      <a class="nav-link active" href="#dashboard" data-section="dashboard"><span>⌂</span> نمای کلی</a>
+      <a class="nav-link" href="#pathways" data-section="pathways"><span>◎</span> مسیرهای کاری</a>
+      <a class="nav-link" href="#australia" data-section="australia"><span>AU</span> استرالیا: مسیرهای پزشکی و فناوری</a>
+      <a class="nav-link" href="#study" data-section="study"><span>✦</span> مسیرهای تحصیلی</a>
+      <a class="nav-link" href="#funding" data-section="funding"><span>◈</span> فاند و بورسیه</a>
+      <a class="nav-link" href="#tracker" data-section="tracker"><span>☑</span> تراکر کارها</a>
+      <a class="nav-link" href="#calendar" data-section="calendar"><span>◷</span> تقویم و ددلاین</a>
+      <a class="nav-link" href="#team" data-section="team"><span>⧉</span> همکاری تیمی</a>
+      <a class="nav-link" href="#cv" data-section="cv"><span>▤</span> CV حرفه‌ای</a>
+      <a class="nav-link" href="#linkedin" data-section="linkedin"><span>in</span> LinkedIn Lab</a>
+      <a class="nav-link" href="#content" data-section="content"><span>✎</span> تقویم محتوا</a>
+      <a class="nav-link" href="#sources" data-section="sources"><span>§</span> منابع</a>
+    </nav>
+    <div class="sidebar-foot">
+      <span class="status-dot"></span>
+      <div><strong>Board Exam Focus</strong><small>تابستان پیش رو</small></div>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <button class="menu-button" aria-label="باز کردن منو">☰</button>
+      <div><p class="eyebrow">مرکز فرماندهی مسیر حرفه‌ای</p><h1>سلام دکتر گرامی</h1></div>
+      <div class="top-actions"><span class="date-pill" id="today-pill"></span><button class="avatar" aria-label="پروفایل">AG</button></div>
+    </header>
+
+    <div id="load-error" class="warning" hidden>داده‌ها بارگذاری نشد. سایت را با یک وب‌سرور باز کن (مثلاً <span dir="ltr">python3 -m http.server 4173</span>) و نه با دوبار کلیک روی فایل.</div>
+
+    <section id="dashboard" class="page active-page">
+      <div class="hero">
+        <div>
+          <span class="hero-tag">INTERNAL MEDICINE · PGY-4</span>
+          <h2>از رزیدنتی تهران تا یک مسیر بین‌المللی روشن.</h2>
+          <p>اولویت اول بورد تابستان ۲۰۲۷ است؛ مسیر کاری اصلی استرالیا و پشتیبان آن آلمان. برای تحصیل، فقط پژوهش بورسیه‌دار در استرالیا فول‌فاند تأیید شد. جزئیات و منابع هر مورد در بخش‌های بعد است.</p>
+          <div class="hero-actions"><a class="button primary" href="#pathways">ماتریس تصمیم</a><a class="button ghost" href="#tracker">تراکر کارها</a></div>
+        </div>
+        <div class="readiness-card">
+          <div class="ring" id="readiness-ring" style="--progress: 0"><span id="readiness-value">۰٪<small>پیشرفت برنامه</small></span></div>
+          <ul id="readiness-list"></ul>
+        </div>
+      </div>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="grid-main">
+        <article class="panel priority-panel">
+          <div class="panel-head"><div><span class="kicker">NEXT BEST ACTIONS</span><h3>اولویت‌های پیش رو</h3></div><a class="badge" href="#tracker">همهٔ کارها</a></div>
+          <div id="priority-list"></div>
+        </article>
+        <article class="panel signal-panel">
+          <div class="panel-head"><div><span class="kicker">PROGRESS</span><h3>پیشرفت هر حوزه</h3></div></div>
+          <div id="category-progress"></div>
+          <p class="note">درصدها از تیک کارهای تراکر خودت حساب می‌شود، نه ارزیابی رسمی.</p>
+        </article>
+      </div>
+
+      <article class="panel verdict-panel">
+        <div class="panel-head"><div><span class="kicker">STRATEGY · ۳۰ اکتبر ۲۰۲۶</span><h3>جمع‌بندی راهبردی</h3></div></div>
+        <ol class="verdict-list">
+          <li><b>بورد اول.</b> مدرک تخصصی پایهٔ مسیر Specialist استرالیا و هر مسیر کاری دیگری است.</li>
+          <li><b>مسیر کاری:</b> استرالیا (Specialist pathway پس از بورد) و آلمان به‌عنوان پشتیبان. آمریکا فعلاً برای پاسپورت ایران بسته است.</li>
+          <li><b>مسیر تحصیلی:</b> فقط PhD یا Research Master بورسیه‌دار استرالیا هم شهریه و هم حقوق دارد (تأییدشده). ایتالیا برای لجستیک ویزا ساده‌تر است، ولی برای طبابت آسان نیست.</li>
+          <li><b>سؤال‌های باز:</b> ویزا و ورود، نتیجهٔ ارزیابی کالج برای مدرک ایران، حقوق تخصص ایتالیا برای پزشک غیراروپایی.</li>
+        </ol>
+      </article>
+      <article class="panel" id="synergy-panel" hidden>
+        <div class="panel-head"><div><span class="kicker">HIGH-LEVERAGE ACTIONS</span><h3>اقدام‌هایی که چند مسیر را هم‌زمان جلو می‌برند</h3></div></div>
+        <div id="synergy-list"></div>
+      </article>
+    </section>
+
+    <section id="pathways" class="page">
+      <div class="section-intro"><span class="kicker">WORK &amp; LICENSE PATHWAYS</span><h2>مسیرهای کاری و مجوز طبابت</h2><p>شش مسیر، براساس منابع بررسی‌شده در ۳۰ اکتبر ۲۰۲۶. امتیازها تخمین من‌اند، نه آمار رسمی؛ با وزن‌هایت ترکیب می‌شوند تا رتبه‌بندی شخصی بدهند.</p></div>
+      <article class="panel matrix-panel">
+        <div class="panel-head"><div><span class="kicker">DECISION MATRIX</span><h3>ماتریس تصمیم (کاری و تحصیلی)</h3></div><button class="text-button" id="weights-reset">بازنشانی وزن‌ها</button></div>
+        <div id="weights" class="weights"></div>
+        <div id="ranking" class="ranking"></div>
+        <p class="note">هر مسیر در هر معیار از ۱ تا ۵ امتیاز دارد (در data/pathways.json و data/study.json). مسیری که تأییدش ناقص است در جدول با برچسب ⚠ می‌آید.</p>
+      </article>
+      <div id="pathway-grid" class="path-grid"></div>
+      <div class="warning">اطلاعات مهاجرت و مجوز پزشکی مرتب تغییر می‌کند. پیش از پرداخت یا ثبت‌نام فقط منبع رسمی رگولاتور و اداره مهاجرت کشور مقصد را ملاک قرار بده.</div>
+    </section>
+
+
+    <section id="australia" class="page">
+      <div class="section-intro"><span class="kicker">AUSTRALIA CAREER STRATEGY</span><h2>استرالیا: پزشکی، Digital Health و AI</h2><p>مسیرهای بالینی و غیر‌بالینی در یک پنل؛ گزینه‌های تغییر کامل شغل هم‌سطح بررسی می‌شوند. برچسب‌ها جایگزین ارزیابی رسمی ویزا، ثبت پزشکی یا استخدام نیستند.</p></div>
+      <article class="panel aus-profile-panel">
+        <div class="panel-head"><div><span class="kicker">YOUR STRATEGY SETTINGS</span><h3>پروفایل استراتژی</h3></div><span class="chip static">Beginner · Fast · All study levels</span></div>
+        <div id="aus-strategy"></div>
+      </article>
+      <div id="aus-groups" class="aus-groups"></div>
+      <article class="panel aus-ladder-panel">
+        <div class="panel-head"><div><span class="kicker">EDUCATION OPTIONS</span><h3>نردبان آموزشی</h3></div></div>
+        <div id="aus-study-ladder" class="aus-ladder"></div>
+      </article>
+      <article class="panel aus-plan-panel">
+        <div class="panel-head"><div><span class="kicker">FIRST 12 WEEKS</span><h3>برنامه شروع از سطح Beginner</h3></div></div>
+        <div id="aus-12weeks" class="aus-timeline"></div>
+      </article>
+      <article class="panel aus-visa-panel">
+        <div class="panel-head"><div><span class="kicker">MIGRATION REALITY CHECK</span><h3>چک‌لیست ویزا و مهاجرت</h3></div></div>
+        <p id="aus-visa-rule"></p><div id="aus-visas" class="aus-visa-links"></div><ul id="aus-visa-checks"></ul>
+      </article>
+      <article class="panel aus-evidence-panel">
+        <div class="panel-head"><div><span class="kicker">IRANIAN SPECIALIST TRAINING</span><h3>مدارک بورد تخصصی ایران</h3></div></div>
+        <p>این مدارک را برای ارزیابی تخصصی آماده کن؛ آزمون بورد ایران را با آزمون‌های AMC یا ارزیابی کالج استرالیا یکی ندان.</p><ul id="aus-board-evidence"></ul>
+      </article>
+      <p class="note">منابع و مقررات باید پیش از هر تصمیم دوباره در وب‌سایت رسمی نهاد مربوط بررسی شوند. نقش شغلی به‌تنهایی واجد شرایط بودن ویزا را ثابت نمی‌کند.</p>
+    </section>
+
+    <section id="study" class="page">
+      <div class="section-intro"><span class="kicker">STUDY PATHWAYS</span><h2>مسیرهای تحصیلی فول‌فاند</h2><p>پرسیده بودی ایتالیا آسان‌تر است یا نه. پاسخ کوتاه: برای ویزای تحصیلی بله، برای طبابت و «فول‌فاند» بودن نه به آن سادگی.</p></div>
+      <article class="panel verdict-panel">
+        <div class="panel-head"><div><span class="kicker">ITALY · REALITY CHECK</span><h3>ایتالیا واقعاً آسان‌تر است؟</h3></div></div>
+        <ul class="verdict-list plain">
+          <li><b>آسان‌تر:</b> سفارت ایتالیا در تهران ویزای تحصیلی را پردازش می‌کند (۲۰۲۶/۲۷)، گواهی CIMEA جای Declaration of Value را می‌گیرد و Uni-Italia تهران راهنمایی می‌کند.</li>
+          <li><b>آسان نیست:</b> تخصص پزشکی آزمون ملی رقابتی دارد، مدرک خارجی باید ثبت شود و پزشک غیراروپایی در صندلی‌های ویژه باید ایتالیایی C1 داشته باشد.</li>
+          <li><b>فول‌فاند:</b> بورسیهٔ MAECI فقط ۱۰٬۸۰۰ یورو برای ۹ ماه است و پزشکی و تخصص را کنار می‌گذارد. حقوق تخصص برای پزشک غیراروپایی تأیید نشد.</li>
+          <li><b>واقع‌بینانه:</b> ایتالیا بیشتر برای یک Master/PhD غیربالینی یا یک مسیر تخصصی بلندمدت با زبان ایتالیایی مناسب است. استرالیا تنها مسیر تأییدشدهٔ فول‌فاند است.</li>
+        </ul>
+      </article>
+      <div id="study-filters" class="chips" role="group" aria-label="فیلتر کشور"></div>
+      <div id="study-grid" class="path-grid"></div>
+      <div id="phd-section" hidden>
+        <div class="section-intro"><span class="kicker">PHD LEADS</span><h2>فرصت‌های PhD (تأییدنشده)</h2><p>این فهرست را خودت یا دستیار دیگری به data/phd-opportunities.json اضافه کرده؛ من مبلغ‌ها، مهلت‌ها و لینک‌ها را بررسی نکرده‌ام. فقط به‌عنوان سرنخ بخوانشان و با صفحهٔ رسمی تطبیق بده.</p></div>
+        <div id="phd-grid" class="path-grid"></div>
+      </div>
+      <div class="warning">فول‌فاند یعنی شهریه، هزینهٔ زندگی و بیمه هر سه پوشش داده شود. در ایتالیا چنین چیزی برای تو تأیید نشد؛ هر ادعای «فول‌فاند» در سایت‌های بورسیه را با فراخوان رسمی تطبیق بده.</div>
+    </section>
+
+    <section id="funding" class="page">
+      <div class="section-intro"><span class="kicker">FUNDING FINDER</span><h2>فاند و بورسیهٔ استرالیا</h2><p>فاندهای مرتبط با رشتهٔ تو — دیجیتال‌هلث / هوش مصنوعی در سلامت و پژوهش بالینی — از منابع رسمی و محلی استرالیا. «تأییدنشده» یعنی سرنخ است و باید با صفحهٔ رسمی تطبیق داده شود. برای هر فاند می‌توانی چک‌لیست requirements را به تراکر اضافه کنی تا از قبل آماده شوی.</p></div>
+      <article class="panel deadline-panel">
+        <div class="panel-head"><div><span class="kicker">UPCOMING DEADLINES</span><h3>ددلاین‌های نزدیک</h3></div></div>
+        <div id="funding-deadlines"></div>
+      </article>
+      <div id="funding-field-filters" class="chips" role="group" aria-label="فیلتر فیلد"></div>
+      <div id="funding-type-filters" class="chips" role="group" aria-label="فیلتر نوع"></div>
+      <div id="funding-grid" class="path-grid"></div>
+      <div class="warning">مبلغ‌ها، مهلت‌ها و شرایط مرتب تغییر می‌کنند. پیش از هر اپلای فقط فراخوان رسمی همان نهاد را ملاک قرار بده. ددلاین‌های «تخمینی» از دور قبل حدس زده شده‌اند.</div>
+    </section>
+
+    <section id="tracker" class="page">
+      <div class="section-intro row">
+        <div><span class="kicker">ACTION TRACKER</span><h2>تراکر کارها</h2><p>کارها فقط در همین مرورگر ذخیره می‌شوند. با «خروجی» پشتیبان بگیر و در دستگاه دیگر «ورودی» بزن. کارهای تازهٔ داده‌ها بعد از هر به‌روزرسانی سایت به فهرست تو اضافه می‌شوند.</p></div>
+        <div class="tracker-tools"><button class="button ghost" id="export-btn">خروجی JSON</button><label class="button ghost file-btn">ورودی JSON<input type="file" id="import-file" accept="application/json" hidden></label><button class="button ghost danger" id="reset-btn">بازنشانی</button></div>
+      </div>
+      <form id="task-form" class="panel task-form">
+        <input id="task-title" placeholder="کار تازه…" required maxlength="140">
+        <select id="task-cat" aria-label="حوزه"></select>
+        <select id="task-prio" aria-label="اولویت"><option value="high">حیاتی</option><option value="mid" selected>متوسط</option><option value="low">کم</option></select>
+        <input id="task-due" type="date" aria-label="سررسید">
+        <button class="button primary" type="submit">افزودن</button>
+      </form>
+      <div id="task-filters" class="chips" role="group" aria-label="فیلتر حوزه"></div>
+      <label class="show-done"><input type="checkbox" id="show-done"> نمایش انجام‌شده‌ها</label>
+      <article class="panel"><div id="task-list"></div></article>
+    </section>
+
+    <section id="calendar" class="page">
+      <div class="section-intro"><span class="kicker">TIMELINE</span><h2>تقویم و ددلاین</h2><p>مهلت‌های پیش‌بینی‌شده و سررسید کارهای باز. تاریخ‌های «تخمینی» را از روی دور قبل حدس زده‌ام و باید در سایت رسمی تأیید شوند.</p></div>
+      <article class="panel board-setter">
+        <label for="board-date"><b>تاریخ بورد</b><small id="board-note"></small></label>
+        <input type="date" id="board-date">
+      </article>
+      <div id="milestones" class="milestones"></div>
+    </section>
+
+    <section id="team" class="page">
+      <div class="section-intro"><span class="kicker">TEAM</span><h2>همکاری تیمی — گرامی و آرش</h2><p>دو مسیر مکمل (Specialist/RACP برای گرامی و GP/RACGP PEP برای آرش) با یک زیرساخت مشترک: نقاط عطف، تبادل مهارت، جلسهٔ هفتگی و ثبت تصمیم‌ها.</p></div>
+      <div id="team-members" class="team-grid"></div>
+      <article class="panel">
+        <div class="panel-head"><div><span class="kicker">SHARED MILESTONES</span><h3>نقاط عطف مشترک</h3></div></div>
+        <div id="team-milestones" class="milestones"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><div><span class="kicker">SYNERGY</span><h3>تبادل مهارت و هم‌افزایی</h3></div></div>
+        <div id="team-synergies"></div>
+      </article>
+      <div class="grid-main">
+        <article class="panel">
+          <div class="panel-head"><div><span class="kicker">WEEKLY AGENDA</span><h3>آجندای جلسهٔ هفتگی</h3></div></div>
+          <ol class="verdict-list" id="team-agenda"></ol>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><div><span class="kicker">DECISION LOG</span><h3>دفترچهٔ تصمیم‌ها</h3></div></div>
+          <div id="team-decisions"></div>
+        </article>
+      </div>
+      <article class="panel">
+        <div class="panel-head"><div><span class="kicker">TOOLS &amp; SYNC</span><h3>ابزارها و همگام‌سازی</h3></div></div>
+        <div id="team-tools" class="verdict-list plain"></div>
+      </article>
+    </section>
+
+    <section id="cv" class="page">
+      <div class="section-intro row"><div><span class="kicker">MASTER MEDICAL CV</span><h2>CV حرفه‌ای انگلیسی</h2><p>نسخه پایه ATS-friendly؛ موارد داخل [براکت] باید با اطلاعات واقعی تکمیل شوند.</p></div><div><button class="button ghost copy-button" data-copy="cv-document">کپی متن</button><button class="button primary" onclick="window.print()">ذخیره PDF / چاپ</button></div></div>
+      <article id="cv-document" class="cv-sheet" dir="ltr">
+        <header><div><h2>AMIR HOUSHANG GERAMI, MD</h2><p>Senior Internal Medicine Resident (PGY-4)</p></div><div class="cv-contact">Tehran, Iran<br>[Email] · [Phone]<br>[LinkedIn URL]</div></header>
+        <section><h3>PROFESSIONAL SUMMARY</h3><p>Senior Internal Medicine Resident at Shahid Beheshti University of Medical Sciences with broad experience across acute and complex medical care, including intensive care, coronary care, emergency medicine, and subspecialty rotations in gastroenterology, nephrology, and pulmonology. Experienced in managing medically complex patients, performing central venous access and temporary dialysis catheter insertion, interpreting peripheral blood smears, and coordinating care in resource-constrained settings. Completed two years of mandatory service in underserved regions and previously served as the physician in charge of a 24-hour outpatient clinic. Internationally oriented, with an active Australian Medical Council portfolio and primary medical qualifications verified through ECFMG.</p></section>
+        <section><h3>CLINICAL EXPERIENCE</h3><div class="cv-entry"><div><strong>Senior Internal Medicine Resident (PGY-4)</strong><span>[Start date] – Present</span></div><em>Shahid Beheshti University of Medical Sciences · Tehran, Iran</em><ul><li>Assess and manage acute, chronic, and medically complex adult patients across inpatient wards, emergency care, ICU, and CCU settings.</li><li>Complete rotations in gastroenterology, nephrology, pulmonology, and other internal medicine subspecialties within tertiary teaching hospitals.</li><li>Perform central venous catheterization and temporary hemodialysis catheter insertion under appropriate supervision and institutional protocols.</li><li>Interpret clinical data including peripheral blood smears and integrate findings into multidisciplinary diagnostic and management plans.</li><li>Contribute to clinical handovers, bedside teaching, and coordinated care for high-acuity patients.</li></ul></div>
+        <div class="cv-entry"><div><strong>General Practitioner — Mandatory Service</strong><span>[Dates]</span></div><em>Underserved Regions, Iran · Hospitals in deprivation categories 3.5–5.5 [confirm scale]</em><ul><li>Delivered frontline medical care during a two-year mandatory service placement in resource-limited communities.</li><li>Triaged, stabilized, treated, and referred patients across a wide spectrum of acute and chronic presentations.</li><li>Adapted clinical decision-making to limited resources while maintaining safe escalation and continuity of care.</li></ul></div>
+        <div class="cv-entry"><div><strong>Physician in Charge / Medical Director</strong><span>[Dates]</span></div><em>24-Hour Outpatient Clinic · [City, Iran]</em><ul><li>Provided clinical oversight for a round-the-clock outpatient service and supported safe, efficient patient flow.</li><li>Coordinated clinical operations and escalation pathways while fulfilling physician-in-charge responsibilities.</li></ul></div></section>
+        <section><h3>EDUCATION &amp; TRAINING</h3><div class="cv-entry compact"><div><strong>Residency in Internal Medicine</strong><span>Expected [Month, Year]</span></div><em>Shahid Beheshti University of Medical Sciences · Tehran, Iran</em></div><div class="cv-entry compact"><div><strong>Doctor of Medicine (MD)</strong><span>[Graduation year]</span></div><em>Shahid Beheshti University of Medical Sciences · Tehran, Iran</em></div></section>
+        <section><h3>CORE CLINICAL SKILLS</h3><p>Acute and complex medical care · ICU and CCU care · Emergency medicine · Internal medicine subspecialties · Central venous catheter insertion · Temporary dialysis catheter (Shaldon) insertion · Peripheral blood smear interpretation · Clinical triage and stabilization · Multidisciplinary care · Resource-limited practice</p></section>
+        <section><h3>INTERNATIONAL CREDENTIALS</h3><ul><li>Australian Medical Council (AMC) portfolio — Active</li><li>AMC CAT MCQ Examination — Previous attempt completed; preparing for re-attempt</li><li>Primary medical diploma and transcript translations submitted and verified through ECFMG [confirm exact status/wording]</li></ul></section>
+        <section><h3>ADDITIONAL INFORMATION</h3><p><strong>Languages:</strong> Persian (Native) · English ([Current level / test score])</p><p><strong>Certifications:</strong> [BLS/ACLS and expiry dates] · [Other relevant courses]</p><p><strong>Research &amp; Publications:</strong> [Add only verifiable publications, presentations, audits, or research]</p></section>
+      </article>
+    </section>
+
+    <section id="linkedin" class="page">
+      <div class="section-intro"><span class="kicker">LINKEDIN LAB</span><h2>پروفایل حرفه‌ای که پیدا می‌شود</h2><p>متن‌ها انگلیسی‌اند تا برای recruiter و همکاران بین‌المللی قابل جست‌وجو باشند.</p></div>
+      <div class="linkedin-grid">
+        <article class="panel copy-card"><span class="step">01</span><h3>Headline پیشنهادی</h3><p id="headline" dir="ltr">Senior Internal Medicine Resident (PGY-4) | Acute &amp; Complex Care | ICU, CCU &amp; Emergency Medicine | AMC Portfolio Holder | Open to International Opportunities</p><button class="text-button copy-button" data-copy="headline">کپی Headline</button></article>
+        <article class="panel copy-card"><span class="step">02</span><h3>About پیشنهادی</h3><div id="about" dir="ltr"><p>I am a senior Internal Medicine Resident (PGY-4) at Shahid Beheshti University of Medical Sciences in Tehran, with hands-on experience caring for acutely unwell and medically complex adults across internal medicine wards, emergency care, ICU, and CCU settings.</p><p>My clinical training includes gastroenterology, nephrology, pulmonology, and other internal medicine subspecialties. I am experienced in central venous access, temporary dialysis catheter insertion, peripheral blood smear interpretation, clinical stabilization, and multidisciplinary patient management.</p><p>Before residency, I completed two years of mandatory medical service in underserved regions and served as the physician in charge of a 24-hour outpatient clinic. These roles strengthened my independence, adaptability, and commitment to equitable care.</p><p>I hold an active Australian Medical Council portfolio, and my primary medical qualifications have been submitted through ECFMG. I am currently strengthening my English credentials and exploring structured international pathways where I can contribute, grow, and deliver safe, evidence-based care.</p><p>I welcome connections with physicians, medical recruiters, mentors, and healthcare professionals working in international medical registration and workforce development.</p></div><button class="text-button copy-button" data-copy="about">کپی About</button></article>
+        <article class="panel"><span class="step">03</span><h3>چک‌لیست تکمیل پروفایل</h3><ul class="checklist"><li>عکس رسمی با نور طبیعی و پس‌زمینه ساده</li><li>Banner مینیمال: Internal Medicine · Acute Care · Global Career</li><li>Location فعلی + گزینه Open to Work فقط برای recruiterها</li><li>تمام Experienceها با ۳ تا ۵ bullet نتیجه‌محور</li><li>حداقل ۳۰ مهارت؛ سه مهارت اول: Internal Medicine، Acute Care، Critical Care</li><li>دو توصیه‌نامه از استاد یا supervisor مستقیم</li><li>Featured: CV، مقاله/ارائه معتبر، گواهی یا پروژه بالینی</li><li>URL اختصاصی: linkedin.com/in/amir-houshang-gerami</li></ul></article>
+        <article class="panel"><span class="step">04</span><h3>قواعد شبکه‌سازی</h3><ul class="checklist"><li>هفته‌ای ۱۵ connection هدفمند، هرکدام با پیام شخصی کوتاه</li><li>هفته‌ای ۳ کامنت تخصصی و واقعی زیر پست پزشکان مقصد</li><li>درخواست شغل بعد از ایجاد زمینه، نه در پیام اول</li><li>ثبت همه ارتباط‌ها و follow-up پس از ۱۰ تا ۱۴ روز</li></ul><div class="message-template" dir="ltr">Hello Dr [Name], I’m a senior Internal Medicine Resident in Tehran exploring [country]’s medical pathway. Your work in [specific area] stood out to me. I’d be glad to connect and learn from your experience.</div></article>
+      </div>
+    </section>
+
+    <section id="content" class="page">
+      <div class="section-intro"><span class="kicker">CONTENT SYSTEM</span><h2>تقویم محتوای ۴ هفته‌ای</h2><p>هدف: نمایش قضاوت بالینی و رشد حرفه‌ای بدون افشای اطلاعات بیمار یا ادعاهای تأییدنشده.</p></div>
+      <div class="calendar">
+        <article><b>هفته ۱</b><span>معرفی حرفه‌ای</span><h3>Why Internal Medicine?</h3><p>یک روایت کوتاه از علاقه به حل مسائل پیچیده و مراقبت جامع؛ ۱۵۰ تا ۲۲۰ کلمه.</p><em>فرمت: متن + عکس حرفه‌ای</em></article>
+        <article><b>هفته ۲</b><span>آموزش بالینی</span><h3>3 lessons from acute care</h3><p>سه اصل عمومی از مدیریت بیمار پیچیده، بدون جزئیات قابل شناسایی.</p><em>فرمت: Carousel پنج اسلایدی</em></article>
+        <article><b>هفته ۳</b><span>رشد فردی</span><h3>Serving underserved communities</h3><p>درس‌هایی از دو سال خدمت در مناطق محروم و تأثیر آن بر تصمیم‌گیری بالینی.</p><em>فرمت: متن داستانی</em></article>
+        <article><b>هفته ۴</b><span>تعامل جهانی</span><h3>Learning across health systems</h3><p>یک سؤال هوشمندانه درباره handover، patient safety یا training از شبکه بین‌المللی.</p><em>فرمت: نظرسنجی / سؤال</em></article>
+      </div>
+      <article class="panel content-rules"><h3>فرمول هر پست</h3><div><span><b>۱</b> Hook یک‌خطی</span><span><b>۲</b> تجربه یا مسئله</span><span><b>۳</b> سه نکته کاربردی</span><span><b>۴</b> سؤال پایانی</span><span><b>۵</b> ۳ تا ۵ هشتگ دقیق</span></div><p>هشتگ‌های پایه: <span dir="ltr">#InternalMedicine #MedicalEducation #GlobalHealth #PhysicianCareers</span></p></article>
+    </section>
+
+    <section id="sources" class="page">
+      <div class="section-intro"><span class="kicker">SOURCES</span><h2>منابع و وضعیت بررسی</h2><p>هر ادعای این سایت به یکی از این منابع برمی‌گردد. برچسب نوع منبع را جدی بگیر: «رسمی» بالاترین اعتبار را دارد و «تجاری» فقط راهنماست.</p></div>
+      <div id="sources-status" class="warning" hidden></div>
+      <article class="panel"><div id="sources-list"></div></article>
+      <p class="note">یک اکشن گیت‌هاب هر هفته این آدرس‌ها را بررسی می‌کند و اگر صفحه‌ای تغییر کرد یا باز نشد، یک issue می‌سازد. نتیجه در data/source-status.json ثبت می‌شود.</p>
+    </section>
+  </main>
+  <div id="toast" role="status" aria-live="polite">کپی شد</div>
+  <script src="app.js"></script>
+</body>
+</html>

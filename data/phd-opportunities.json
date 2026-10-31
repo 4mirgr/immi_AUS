@@ -1,0 +1,50 @@
+[
+  {
+    "id": "it-phd-med-sci",
+    "country": "ایتالیا 🇮🇹",
+    "university": "Sapienza University of Rome / University of Bologna",
+    "field": "Medical and Clinical Sciences (PhD)",
+    "language": "انگلیسی (مدرک B2/C1 یا مصاحبه)",
+    "funding": "فول‌فاند (حدود ۱۶,۰۰۰ یورو در سال + معافیت شهریه)",
+    "relevance_to_im": "بسیار بالا (امکان تعریف پروژه روی بیماری‌های مزمن، قلب، یا گوارش)",
+    "deadline": "ژوئن تا ژوئیه (سالانه)",
+    "requirements": "مدرک MD یا تخصص، پروپوزال تحقیقاتی اولیه، ۲ توصیه‌نامه",
+    "link": "https://www.uniroma1.it/en/pagina-strutturale/phd-medical-and-clinical-sciences"
+  },
+  {
+    "id": "it-phd-public-health",
+    "country": "ایتالیا 🇮🇹",
+    "university": "University of Padua / Bocconi (Health Management)",
+    "field": "Public Health, Epidemiology, or Health Data Science",
+    "language": "انگلیسی",
+    "funding": "فول‌فاند یا بورسیه DSU (منطقه‌ای)",
+    "relevance_to_im": "متوسط رو به بالا (مناسب برای تغییر مسیر به تحقیقات سلامت و سیاست‌گذاری)",
+    "deadline": "آوریل تا مه",
+    "requirements": "انگیزه‌نامه قوی، آشنایی مقدماتی با آمار (R/Python امتیاز محسوب می‌شود)",
+    "link": "https://www.unipd.it/en/phd-programmes"
+  },
+  {
+    "id": "aus-phd-clinical",
+    "country": "استرالیا 🇦🇺",
+    "university": "University of Melbourne / UNSW / UTS",
+    "field": "Clinical Research / Internal Medicine Subspecialties",
+    "language": "IELTS 6.5-7.0 یا OET B",
+    "funding": "RTP/IRTP (شهریه + حقوق حدود ۳۹,۰۰۰ دلار استرالیا)",
+    "relevance_to_im": "بالا (امکان کار در بیمارستان‌های وابسته به دانشگاه به عنوان Research Officer)",
+    "deadline": "دو دور در سال (معمولاً مارس و آگوست)",
+    "requirements": "سابقه انتشار مقاله (حداقل ۱ مورد)، یافتن سوپروایزر قبل از اپلای",
+    "link": "https://www.unsw.edu.au/research/research-study/research-degrees"
+  },
+  {
+    "id": "ger-phd-med",
+    "country": "آلمان 🇩🇪",
+    "university": "Charité (Berlin) / Heidelberg University",
+    "field": "Dr. med. or PhD in Clinical Research",
+    "language": "انگلیسی (برای پژوهش)، آلمانی A2/B1 (برای زندگی روزمره و امتیاز)",
+    "funding": "موقعیت شغلی پژوهشی (TV-L E13, 65% یا 100%) با حقوق کامل",
+    "relevance_to_im": "بالا (سیستم آلمان برای پزشکان خارجی در محیط‌های آکادمیک بسیار باز است)",
+    "deadline": "باز (Rolling basis، وابسته به پوزیشن خالی)",
+    "requirements": "مدرک پزشکی تأییدشده، سابقه پژوهشی، ایمیل مستقیم به اساتید",
+    "link": "https://www.charite.de/en/studies_and_teaching/doctoral_studies/"
+  }
+]
