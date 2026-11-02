@@ -13,6 +13,7 @@ const pathways = load('pathways');
 const study = load('study');
 const funding = load('funding');
 const team = load('team');
+const references = load('references');
 const tasks = load('tasks');
 const milestones = load('milestones');
 const isDate = s => /^\d{4}-\d{2}-\d{2}$/.test(s) && !Number.isNaN(Date.parse(s));
@@ -101,6 +102,25 @@ if (team) {
     if (!['estimate', 'confirmed'].includes(m.kind)) errors.push(`team/sharedMilestones/${m.id}: kind must be estimate or confirmed`);
   }
   for (const d of team.decisions || []) if (!isDate(d.date)) errors.push('team/decisions: bad date');
+}
+
+if (references) {
+  if (!isDate(references.updated)) errors.push('references.updated must be YYYY-MM-DD');
+  if (!Array.isArray(references.tracks) || references.tracks.length === 0) errors.push('references: tracks missing');
+  else {
+    const rids = new Set();
+    for (const tr of references.tracks) {
+      if (rids.has(tr.id)) errors.push(`references/${tr.id}: duplicate track id`);
+      rids.add(tr.id);
+      if (!tr.title) errors.push(`references/${tr.id}: title missing`);
+      if (tr.sources) checkSources(`references/${tr.id}`, tr.sources);
+      if (!Array.isArray(tr.items) || tr.items.length === 0) errors.push(`references/${tr.id}: items missing`);
+      else for (const it of tr.items) {
+        if (!it.id || !it.title) errors.push(`references/${tr.id}/items: id and title required`);
+        if (it.checklist && !Array.isArray(it.checklist)) errors.push(`references/${tr.id}/${it.id}: checklist must be an array`);
+      }
+    }
+  }
 }
 
 if (warnings.length) console.warn(warnings.map(w => `! ${w}`).join('\n'));

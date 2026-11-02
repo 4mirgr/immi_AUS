@@ -72,7 +72,7 @@
   /* ---------- data ---------- */
   async function loadData() {
     const out = {};
-    await Promise.all(['meta', 'pathways', 'study', 'funding', 'team', 'tasks', 'milestones'].map(async n => {
+    await Promise.all(['meta', 'pathways', 'study', 'funding', 'team', 'references', 'tasks', 'milestones'].map(async n => {
       const r = await fetch(`data/${n}.json`, { cache: 'no-cache' });
       if (!r.ok) throw new Error(`${n}.json`);
       out[n] = await r.json();
@@ -371,6 +371,50 @@
     ].filter(([, v]) => v).map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('');
   }
 
+  /* ---------- references ---------- */
+  function renderReferences() {
+    const R = D.references || {};
+    const notes = R.notes || [];
+    const noteBox = $('#ref-notes');
+    noteBox.hidden = !notes.length;
+    if (notes.length) noteBox.innerHTML = `<strong>نکتهٔ کلیدی:</strong><ul class="note-list">${notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul>`;
+
+    $('#references-tracks').innerHTML = (R.tracks || []).map(track => `
+      <article class="panel ref-track">
+        <div class="panel-head"><div><span class="kicker">${esc(track.icon)}</span><h3>${esc(track.title)}</h3></div></div>
+        <p class="track-summary">${esc(track.summary)}</p>
+        <div class="ref-items">
+          ${(track.items || []).map(it => `
+            <div class="ref-item">
+              <header><strong>${esc(it.title)}</strong></header>
+              <dl class="long">
+                ${[['از چه کسی', it.who], ['فرمت', it.format], ['زمان', it.when], ['محتوا', it.content]]
+                  .filter(([, v]) => v).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}
+              </dl>
+              ${it.checklist?.length ? `<details class="reqs"><summary>چک‌لیست (${it.checklist.length} مورد)</summary><ul class="req-list">${it.checklist.map(c => `<li>${esc(c)}</li>`).join('')}</ul></details>` : ''}
+              <button class="text-button add-to-tracker" data-reference="${esc(track.id)}::${esc(it.id)}">＋ افزودن چک‌لیست به تراکر</button>
+            </div>`).join('')}
+        </div>
+        ${track.sources?.length ? sourceLinks(track.sources) : ''}
+      </article>`).join('');
+  }
+
+  function addReferenceToTracker(it) {
+    const title = `تهیهٔ ${it.title}`;
+    if (tasks.items.some(t => t.title === title)) { toast('این مورد از قبل در تراکر هست'); return; }
+    tasks.items.push({
+      id: newId(),
+      title,
+      cat: 'credentials',
+      prio: 'high',
+      due: null,
+      note: (it.checklist || []).map(c => `• ${c}`).join(' '),
+      done: false
+    });
+    refreshTasksEverywhere();
+    toast('چک‌لیست به تراکر اضافه شد');
+  }
+
   /* ---------- tracker ---------- */
   function renderTaskControls() {
     $('#task-cat').innerHTML = allCats().map(c => `<option value="${c.id}">${esc(c.label)}</option>`).join('');
@@ -568,6 +612,14 @@
       if (ft) { fundingType = ft.dataset.fundingType; renderFunding(); return; }
       const fa = e.target.closest('[data-funding]');
       if (fa) { const f = D.funding.find(x => x.id === fa.dataset.funding); if (f) addFundingToTracker(f); return; }
+      const rf = e.target.closest('[data-reference]');
+      if (rf) {
+        const [tid, iid] = rf.dataset.reference.split('::');
+        const track = (D.references?.tracks || []).find(t => t.id === tid);
+        const it = track?.items?.find(x => x.id === iid);
+        if (it) addReferenceToTracker(it);
+        return;
+      }
     });
     $('#task-form').addEventListener('submit', e => {
       e.preventDefault();
@@ -624,7 +676,7 @@
     renderDashboard();
     renderWeights(); renderRanking();
     renderPathways(); renderStudy(); renderPhd(); renderSynergies();
-    renderFunding(); renderTeam();
+    renderFunding(); renderTeam(); renderReferences();
     renderTaskControls(); renderTasks();
     renderBoardNote(); renderMilestones();
     renderSources();

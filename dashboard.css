@@ -179,7 +179,6 @@ a.badge:hover{background:var(--teal);color:#fff}
 @media(max-width:1050px){.team-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.deadline-row{grid-template-columns:1fr}.deadline-meta{justify-items:start;text-align:right}}
 
-
 /* Australia pathways */
 .aus-profile-panel,.aus-ladder-panel,.aus-plan-panel,.aus-visa-panel,.aus-evidence-panel{margin:18px 0}
 .aus-north-star{font-size:13px;line-height:1.9;color:#33465c;margin:0 0 14px}
@@ -212,3 +211,14 @@ a.badge:hover{background:var(--teal);color:#fff}
 .aus-visa-links a{padding:7px 10px;background:#f2f7f8;border-radius:8px}
 @media(max-width:900px){.aus-ladder{grid-template-columns:repeat(2,minmax(0,1fr))}.aus-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.aus-priority-grid,.aus-path-grid,.aus-ladder,.aus-timeline{grid-template-columns:1fr}}
+/* references */
+.ref-track{margin-bottom:20px}
+.ref-track .kicker{font-size:22px;letter-spacing:0}
+.track-summary{margin:8px 0 16px;font-size:12px;line-height:1.9;color:#46576b}
+.note-list{margin:8px 0 0;padding:0 18px 0 0;line-height:1.9;font-size:12px}
+.ref-items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:14px}
+.ref-item{background:#fafbfc;border:1px solid var(--line);border-radius:12px;padding:16px}
+.ref-item header strong{font-size:13px;color:var(--teal-dark)}
+.ref-item dl.long{margin-top:8px}
+.ref-item dd{font-size:11px}
+@media(max-width:1050px){.ref-items{grid-template-columns:1fr}}
