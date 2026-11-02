@@ -1,0 +1,84 @@
+{
+  "updated": "2026-10-30",
+  "members": [
+    {
+      "id": "gerami",
+      "name": "دکتر امیر هوشنگ گرامی",
+      "initials": "AG",
+      "role": "Senior Internal Medicine Resident (PGY-4)",
+      "path": "Specialist pathway (RACP) + PhD دیجیتال‌هلث",
+      "status": "بورد تابستان ۲۰۲۷؛ در حال ساخت سابقهٔ پژوهشی",
+      "focus": [
+        "نهایی کردن زبان (IELTS/OET)",
+        "بورد داخلی",
+        "۱-۲ مقاله + دوره‌های AI/Coursera",
+        "یافتن سوپروایزر و اپلای RTP"
+      ],
+      "strengths": ["تحقیق و انتشار", "CV/LinkedIn و برند", "زاویهٔ دیجیتال‌هلث", "شبکهٔ آکادمیک"]
+    },
+    {
+      "id": "arash",
+      "name": "دکتر آرش انتظار",
+      "initials": "AE",
+      "role": "General Practitioner (چند سال سابقهٔ کار)",
+      "path": "Standard pathway (GP) / RACGP PEP",
+      "status": "AMC MCQ (Level 1) و زبان پاس شده؛ منتظر job offer + supervisor برای PESCI",
+      "focus": [
+        "یافتن کارفرما در مناطق DPA/روستایی",
+        "اتصال به آژانس نیروی کار روستایی هر ایالت",
+        "ثبت‌نام در RACGP PEP",
+        "تکمیل پورتفولیوی شواهد و LinkedIn"
+      ],
+      "strengths": ["مسیر AMC (جلوتر در MCQ/زبان/EPIC)", "تجربهٔ بالینی GP", "شبکهٔ مطب/کلینیک"]
+    }
+  ],
+  "sharedMilestones": [
+    { "id": "tm-english", "date": "2026-12-15", "kind": "confirmed", "owner": "هر دو", "title": "نهایی کردن مدرک زبان هر دو نفر", "note": "گرامی: تعیین آزمون؛ آرش: اطمینان از اعتبار مدرک برای AHPRA" },
+    { "id": "tm-epic", "date": "2026-12-31", "kind": "estimate", "owner": "هر دو", "title": "تأیید کامل مدارک در ECFMG EPIC", "note": "وضعیت Verified برای هر دو" },
+    { "id": "tm-board", "date": "2027-07-01", "kind": "estimate", "owner": "گرامی", "title": "بورد داخلی", "note": "دروازهٔ مسیر Specialist (RACP)" },
+    { "id": "tm-arash-job", "date": "2027-03-31", "kind": "estimate", "owner": "آرش", "title": "امضای قرارداد کار GP + شروع فرایند PESCI", "note": "هدف: مناطق DPA/روستایی + آژانس‌های نیروی کار روستایی" },
+    { "id": "tm-rtp-apply", "date": "2027-05-15", "kind": "estimate", "owner": "گرامی", "title": "ارسال درخواست بورسیهٔ RTP/IRTP", "note": "پس از یافتن سوپروایزر و تکمیل سابقه" }
+  ],
+  "synergies": [
+    {
+      "action": "آرش مربی گرامی در AMC MCQ، EPIC و زبان",
+      "detail": "آرش قبلاً این مسیر را رفته؛ تجربه و منابعش را منتقل می‌کند.",
+      "owner": "آرش → گرامی",
+      "priority": "high"
+    },
+    {
+      "action": "گرامی مربی آرش در CV، پورتفولیوی شواهد و LinkedIn",
+      "detail": "پروفایل قوی + زاویهٔ «GP + telehealth» برای متمایز شدن آرش.",
+      "owner": "گرامی → آرش",
+      "priority": "high"
+    },
+    {
+      "action": "ارجاع متقابل شبکه",
+      "detail": "شبکهٔ بیمارستانی/تحقیقاتی گرامی → سرنخ شغل GP برای آرش؛ شبکهٔ مطب آرش → سرنخ جایگاه پژوهشی برای گرامی.",
+      "owner": "هر دو",
+      "priority": "high"
+    },
+    {
+      "action": "جلسهٔ هفتگی پیشرفت (Google Meet / MS Teams)",
+      "detail": "بازبینی نقاط عطف مشترک + ثبت تصمیم‌ها در همین سایت/فایل مشترک.",
+      "owner": "هر دو",
+      "priority": "critical"
+    }
+  ],
+  "weeklyAgenda": [
+    "مرور نقاط عطف مشترک و ددلاین‌های نزدیک (۱۵ دقیقه)",
+    "یک برد و یک مانع هر نفر (۱۰ دقیقه)",
+    "تعیین ۲ اقدام مشخص برای هفتهٔ بعد (۱۰ دقیقه)",
+    "ثبت تصمیم‌ها و به‌روزرسانی وضعیت در فایل مشترک (۵ دقیقه)"
+  ],
+  "decisions": [
+    { "date": "2026-10-30", "decision": "تمرکز فاند بر استرالیا و دو فیلد دیجیتال‌هلث و پژوهش بالینی؛ راه‌اندازی بخش «فاندیاب» در سایت.", "owner": "گرامی" },
+    { "date": "2026-10-30", "decision": "گلوگاه آرش را از «انتظار منفعل» به «هدف‌گیری فعال مناطق DPA/روستایی + RACGP PEP» تغییر می‌دهیم.", "owner": "هر دو" }
+  ],
+  "tools": {
+    "liveDocs": "Google Workspace (Drive/Sheets/Docs) یا Microsoft 365 (Teams/SharePoint) برای مستندات زنده و مشترک",
+    "meetings": "Google Meet یا Microsoft Teams — جلسهٔ هفتگی ثابت",
+    "sync": "این سایت «داشبورد ثبت» است؛ تغییرات data/team.json با commit به همین رپوی GitHub برای هر دو دیده می‌شود.",
+    "sheetHint": "یک Google Sheet مشترک برای نقاط عطف و log تصمیم‌ها بسازید و لینکش را اینجا نگه دارید تا همیشه در دسترس باشد."
+  }
+}

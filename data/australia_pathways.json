@@ -1,0 +1,956 @@
+{
+  "schema_version": "1.0",
+  "id": "australia-medical-career-pathways",
+  "title": "Australia Medical, Digital Health & Career Transition Pathways",
+  "last_reviewed": "2026-10-31",
+  "country": "Australia",
+  "language": "en",
+  "purpose": "A pathway catalogue for comparing clinical, digital-health, AI, research, and broader career-transition options for an internationally trained physician.",
+  "important_notice": "This catalogue is for exploration, not a determination of visa eligibility, medical registration, specialist recognition, or employment eligibility. Requirements change. Verify each case against the linked official regulator, visa instrument, state nomination, university, and employer sources before making decisions.",
+  "pathway_groups": [
+    {
+      "id": "clinical_medicine",
+      "name": "Clinical Medicine",
+      "description": "Continue practising medicine in Australia, with routes depending on qualifications, training, specialist status, and registration requirements.",
+      "pathways": [
+        {
+          "id": "specialist_assessment",
+          "title": "Overseas-Trained Physician / Specialist Assessment",
+          "route_type": "clinical",
+          "summary": "Seek assessment of overseas specialist qualifications and training through the relevant Australian specialist college and Medical Board pathways.",
+          "possible_roles": [
+            "Physician",
+            "General Physician",
+            "Internal Medicine Specialist"
+          ],
+          "typical_steps": [
+            "Identify the relevant specialist college and pathway for the exact specialty.",
+            "Collect primary-source evidence of medical degree, internship, residency, specialist training, board examinations, and specialist certification.",
+            "Submit the required college assessment and meet any comparability, supervision, examination, or workplace-based requirements.",
+            "Meet Medical Board/Ahpra registration requirements and secure an appropriate supervised or approved position where required."
+          ],
+          "iran_specific_evidence": [
+            "Iranian internal medicine residency completion evidence",
+            "Iranian written specialist board examination result",
+            "Iranian oral specialist board examination result",
+            "Specialist certificate, when issued",
+            "Detailed rotations, logbooks, references, and employment history"
+          ],
+          "key_uncertainties": [
+            "The outcome depends on individual training and evidence; an Iranian specialist certificate is not automatically equivalent to Australian specialist recognition.",
+            "College assessment and medical registration are separate processes.",
+            "Do not assume a particular examination or supervision outcome before formal assessment."
+          ],
+          "official_sources": [
+            {
+              "name": "Medical Board of Australia",
+              "url": "https://www.medicalboard.gov.au/"
+            },
+            {
+              "name": "Australian Health Practitioner Regulation Agency (Ahpra)",
+              "url": "https://www.ahpra.gov.au/"
+            },
+            {
+              "name": "Royal Australasian College of Physicians (RACP)",
+              "url": "https://www.racp.edu.au/"
+            },
+            {
+              "name": "Australian Medical Council (AMC)",
+              "url": "https://www.amc.org.au/"
+            }
+          ],
+          "verification_status": "individual_assessment_required"
+        },
+        {
+          "id": "amc_standard_pathway",
+          "title": "AMC Standard Pathway",
+          "route_type": "clinical",
+          "summary": "A route for eligible international medical graduates seeking general registration through the AMC assessment process and the required supervised practice pathway.",
+          "possible_roles": [
+            "Resident Medical Officer",
+            "Hospital Medical Officer",
+            "Medical Practitioner"
+          ],
+          "typical_steps": [
+            "Check primary-source qualification verification and AMC eligibility requirements.",
+            "Complete the applicable AMC examinations or assessment route.",
+            "Meet the required supervised practice and workplace requirements.",
+            "Apply for the appropriate Medical Board registration."
+          ],
+          "key_uncertainties": [
+            "The precise sequence depends on current AMC and Medical Board rules.",
+            "Passing AMC assessments does not itself guarantee a job, visa, or registration."
+          ],
+          "official_sources": [
+            {
+              "name": "AMC pathways to registration",
+              "url": "https://www.amc.org.au/"
+            },
+            {
+              "name": "Medical Board of Australia",
+              "url": "https://www.medicalboard.gov.au/"
+            }
+          ],
+          "verification_status": "official_requirements_must_be_checked"
+        },
+        {
+          "id": "hospital_nontraining_roles",
+          "title": "Hospital Non-Training / Service Medical Roles",
+          "route_type": "clinical",
+          "summary": "Explore service, resident, or hospital medical officer positions where the applicant meets the employer's and regulator's requirements.",
+          "possible_roles": [
+            "Resident Medical Officer",
+            "Hospital Medical Officer",
+            "Service Registrar"
+          ],
+          "typical_steps": [
+            "Establish the registration pathway and permissible scope of practice.",
+            "Review state health-service recruitment criteria and credentialing requirements.",
+            "Prepare an Australian-style CV, referee list, and evidence of clinical experience.",
+            "Apply only to roles for which registration and work-right requirements can be met."
+          ],
+          "key_uncertainties": [
+            "Job title does not establish registration eligibility.",
+            "Employer credentialing, visa sponsorship, and registration are distinct checks."
+          ],
+          "official_sources": [
+            {
+              "name": "Ahpra",
+              "url": "https://www.ahpra.gov.au/"
+            },
+            {
+              "name": "Jobs and Skills Australia",
+              "url": "https://www.jobsandskills.gov.au/"
+            },
+            {
+              "name": "Australian Government visa options",
+              "url": "https://immi.homeaffairs.gov.au/what-we-do/skilled-migration-program/visa-options"
+            }
+          ],
+          "verification_status": "employer_and_regulator_check_required"
+        }
+      ]
+    },
+    {
+      "id": "digital_health_software",
+      "name": "Digital Health & Medical Software",
+      "description": "Build, implement, evaluate, or manage software used by clinicians, hospitals, patients, and health systems.",
+      "pathways": [
+        {
+          "id": "clinical_informatics",
+          "title": "Clinical Informatics",
+          "route_type": "digital_health",
+          "summary": "Use clinical knowledge and information systems expertise to improve clinical workflows, records, decision support, and health-system operations.",
+          "possible_roles": [
+            "Clinical Informatician",
+            "Clinical Systems Analyst",
+            "Digital Health Consultant",
+            "Clinical Application Specialist"
+          ],
+          "skills_to_build": [
+            "Clinical workflow analysis",
+            "EHR/EMR systems",
+            "FHIR and HL7 fundamentals",
+            "SQL",
+            "Requirements gathering",
+            "Clinical safety and change management"
+          ],
+          "portfolio_projects": [
+            "Clinical workflow mapping",
+            "Synthetic-data clinical dashboard",
+            "FHIR-based mock patient-record application"
+          ],
+          "entry_routes": [
+            "Relevant digital-health employment",
+            "Graduate study in health informatics",
+            "Clinical systems implementation roles"
+          ],
+          "key_uncertainties": [
+            "Role titles and required qualifications vary widely by employer; some roles require substantial IT implementation experience."
+          ],
+          "official_sources": [
+            {
+              "name": "Australian Digital Health Agency",
+              "url": "https://www.digitalhealth.gov.au/"
+            },
+            {
+              "name": "Jobs and Skills Australia",
+              "url": "https://www.jobsandskills.gov.au/"
+            }
+          ],
+          "verification_status": "role_and_employer_specific"
+        },
+        {
+          "id": "medical_software_development",
+          "title": "Medical Software / HealthTech Developer",
+          "route_type": "digital_health",
+          "summary": "Develop applications and software products for clinical, hospital, patient, or healthcare-business use cases.",
+          "possible_roles": [
+            "Healthcare Software Developer",
+            "Full-Stack Developer",
+            "Clinical Application Developer",
+            "HealthTech Software Engineer"
+          ],
+          "skills_to_build": [
+            "Python or JavaScript/TypeScript",
+            "Backend APIs",
+            "Databases and SQL",
+            "Git and testing",
+            "Cloud fundamentals",
+            "Authentication and security",
+            "FHIR/HL7 basics"
+          ],
+          "portfolio_projects": [
+            "Appointment and follow-up platform using synthetic data",
+            "Medication reconciliation prototype",
+            "Clinical documentation tool with audit trail"
+          ],
+          "entry_routes": [
+            "Portfolio-led junior developer route",
+            "Computer science/software qualification",
+            "HealthTech internship or implementation-to-development transition"
+          ],
+          "key_uncertainties": [
+            "A medical degree alone is not a substitute for software engineering skills; hiring typically requires demonstrable coding ability."
+          ],
+          "official_sources": [
+            {
+              "name": "Australian Digital Health Agency",
+              "url": "https://www.digitalhealth.gov.au/"
+            },
+            {
+              "name": "Jobs and Skills Australia",
+              "url": "https://www.jobsandskills.gov.au/"
+            }
+          ],
+          "verification_status": "role_and_employer_specific"
+        },
+        {
+          "id": "healthtech_product",
+          "title": "HealthTech Product Management",
+          "route_type": "digital_health",
+          "summary": "Translate clinical needs into product requirements and coordinate design, engineering, implementation, evaluation, and adoption.",
+          "possible_roles": [
+            "Associate Product Manager",
+            "Clinical Product Manager",
+            "HealthTech Product Specialist",
+            "Digital Health Product Owner"
+          ],
+          "skills_to_build": [
+            "Product discovery",
+            "User research",
+            "Clinical workflow design",
+            "Agile delivery",
+            "Metrics and analytics",
+            "Technical literacy",
+            "Privacy and safety by design"
+          ],
+          "portfolio_projects": [
+            "Product requirements document for a clinical app",
+            "Clickable prototype",
+            "Product analytics and evaluation plan"
+          ],
+          "entry_routes": [
+            "Clinical subject-matter expert role in a technology company",
+            "Product operations or implementation role",
+            "Formal product training plus portfolio"
+          ],
+          "key_uncertainties": [
+            "Product roles often require prior product delivery experience; a clinical background is an advantage but not a guarantee."
+          ],
+          "official_sources": [
+            {
+              "name": "Australian Digital Health Agency",
+              "url": "https://www.digitalhealth.gov.au/"
+            },
+            {
+              "name": "Jobs and Skills Australia",
+              "url": "https://www.jobsandskills.gov.au/"
+            }
+          ],
+          "verification_status": "role_and_employer_specific"
+        }
+      ]
+    },
+    {
+      "id": "medical_ai",
+      "name": "AI & Medical AI",
+      "description": "Apply machine learning and language technologies to healthcare problems, with a strong emphasis on evaluation, safety, and clinical validity.",
+      "pathways": [
+        {
+          "id": "clinical_ai_research",
+          "title": "Clinical AI Research",
+          "route_type": "ai",
+          "summary": "Conduct research on AI methods and their performance, safety, bias, and clinical usefulness in healthcare.",
+          "possible_roles": [
+            "Clinical AI Research Assistant",
+            "Research Officer",
+            "PhD Candidate",
+            "Clinical Research Collaborator"
+          ],
+          "skills_to_build": [
+            "Python",
+            "Statistics",
+            "Machine learning fundamentals",
+            "Research methods",
+            "Model evaluation",
+            "Scientific writing",
+            "Data governance"
+          ],
+          "portfolio_projects": [
+            "Retrospective model evaluation on a public dataset",
+            "Bias and subgroup-performance report",
+            "Reproducible clinical prediction study"
+          ],
+          "entry_routes": [
+            "Research assistant position",
+            "Research master's or PhD",
+            "Collaboration with an academic group"
+          ],
+          "key_uncertainties": [
+            "Research roles may require publications, formal quantitative training, or postgraduate research qualifications."
+          ],
+          "official_sources": [
+            {
+              "name": "NHMRC",
+              "url": "https://www.nhmrc.gov.au/"
+            },
+            {
+              "name": "Australian Research Council",
+              "url": "https://www.arc.gov.au/"
+            },
+            {
+              "name": "Research Training Program",
+              "url": "https://www.education.gov.au/research-block-grants/research-training-program"
+            }
+          ],
+          "verification_status": "university_and_project_specific"
+        },
+        {
+          "id": "medical_llm_apps",
+          "title": "Medical LLM / AI Application Builder",
+          "route_type": "ai",
+          "summary": "Build clinician-facing or patient-facing prototypes using language models, retrieval, structured data, and safety controls.",
+          "possible_roles": [
+            "AI Application Developer",
+            "LLM Application Engineer",
+            "Clinical AI Product Specialist",
+            "AI Evaluation Analyst"
+          ],
+          "skills_to_build": [
+            "Python",
+            "APIs",
+            "LLM application patterns",
+            "Retrieval-augmented generation",
+            "Evaluation datasets",
+            "Prompt and output testing",
+            "Privacy and security"
+          ],
+          "portfolio_projects": [
+            "Medical knowledge RAG with cited source passages",
+            "Clinical note summarisation prototype using synthetic data",
+            "AI answer evaluation benchmark with error taxonomy"
+          ],
+          "safety_requirements": [
+            "Clearly label prototypes as non-clinical unless appropriately validated and authorised.",
+            "Use synthetic or appropriately licensed de-identified data.",
+            "Measure hallucinations, omissions, bias, and unsafe recommendations.",
+            "Do not deploy patient-care decision support without appropriate clinical, privacy, and regulatory review."
+          ],
+          "key_uncertainties": [
+            "A working demo does not establish clinical safety, regulatory compliance, or employability as an AI engineer."
+          ],
+          "official_sources": [
+            {
+              "name": "Australian Digital Health Agency",
+              "url": "https://www.digitalhealth.gov.au/"
+            },
+            {
+              "name": "Therapeutic Goods Administration",
+              "url": "https://www.tga.gov.au/"
+            },
+            {
+              "name": "Office of the Australian Information Commissioner",
+              "url": "https://www.oaic.gov.au/"
+            }
+          ],
+          "verification_status": "role_and_regulatory_scope_specific"
+        },
+        {
+          "id": "health_data_science",
+          "title": "Health Data Science / Analytics",
+          "route_type": "ai_data",
+          "summary": "Analyse health datasets to support service planning, quality improvement, research, and decision-making.",
+          "possible_roles": [
+            "Health Data Analyst",
+            "Healthcare BI Analyst",
+            "Clinical Data Analyst",
+            "Health Data Scientist"
+          ],
+          "skills_to_build": [
+            "SQL",
+            "Python or R",
+            "Statistics",
+            "Data visualisation",
+            "Data cleaning",
+            "Study design",
+            "Data governance"
+          ],
+          "portfolio_projects": [
+            "Hospital activity dashboard using public data",
+            "Clinical quality indicator analysis",
+            "Reproducible cohort analysis"
+          ],
+          "entry_routes": [
+            "Analyst portfolio",
+            "Graduate certificate or master's",
+            "Research/data assistant role"
+          ],
+          "key_uncertainties": [
+            "Data scientist roles often require stronger statistics, programming, and modelling experience than analyst roles."
+          ],
+          "official_sources": [
+            {
+              "name": "Australian Institute of Health and Welfare",
+              "url": "https://www.aihw.gov.au/"
+            },
+            {
+              "name": "Australian Bureau of Statistics",
+              "url": "https://www.abs.gov.au/"
+            },
+            {
+              "name": "Jobs and Skills Australia",
+              "url": "https://www.jobsandskills.gov.au/"
+            }
+          ],
+          "verification_status": "role_and_employer_specific"
+        }
+      ]
+    },
+    {
+      "id": "research_academia",
+      "name": "Research, Academia & Public Health",
+      "description": "Use medical training in research, epidemiology, clinical trials, health services, or population health.",
+      "pathways": [
+        {
+          "id": "phd_digital_health",
+          "title": "PhD in Digital Health / Biomedical Informatics / Medical AI",
+          "route_type": "research_study",
+          "summary": "Undertake supervised research at a university in digital health, clinical AI, biomedical informatics, or health data science.",
+          "possible_outcomes": [
+            "PhD candidate",
+            "Research fellow (subject to qualifications and experience)",
+            "Academic researcher",
+            "Industry research scientist"
+          ],
+          "typical_steps": [
+            "Identify a suitable research group and supervisor.",
+            "Develop a focused research proposal.",
+            "Check entry requirements and English-language requirements.",
+            "Assess scholarships and funding separately from admission.",
+            "Confirm research ethics and data-access feasibility."
+          ],
+          "funding_sources": [
+            {
+              "name": "Research Training Program",
+              "url": "https://www.education.gov.au/research-block-grants/research-training-program"
+            }
+          ],
+          "key_uncertainties": [
+            "Admission, scholarship award, stipend, and visa eligibility are separate decisions.",
+            "A PhD does not automatically lead to permanent employment or migration eligibility."
+          ],
+          "official_sources": [
+            {
+              "name": "Australian Government Department of Education - RTP",
+              "url": "https://www.education.gov.au/research-block-grants/research-training-program"
+            },
+            {
+              "name": "Study Australia",
+              "url": "https://www.studyaustralia.gov.au/"
+            }
+          ],
+          "verification_status": "university_and_scholarship_specific"
+        },
+        {
+          "id": "clinical_epidemiology",
+          "title": "Clinical Epidemiology / Public Health",
+          "route_type": "research_study",
+          "summary": "Apply clinical knowledge to population health, epidemiology, outcomes research, health policy, and evidence synthesis.",
+          "possible_roles": [
+            "Epidemiology Research Assistant",
+            "Public Health Researcher",
+            "Clinical Epidemiologist",
+            "Health Services Researcher"
+          ],
+          "skills_to_build": [
+            "Epidemiology",
+            "Biostatistics",
+            "Study design",
+            "R or Stata",
+            "Systematic reviews",
+            "Scientific writing"
+          ],
+          "study_options": [
+            "Master of Public Health",
+            "Master of Clinical Epidemiology",
+            "Research degree"
+          ],
+          "key_uncertainties": [
+            "Professional titles and roles may have specific qualification or experience requirements."
+          ],
+          "official_sources": [
+            {
+              "name": "NHMRC",
+              "url": "https://www.nhmrc.gov.au/"
+            },
+            {
+              "name": "Australian Institute of Health and Welfare",
+              "url": "https://www.aihw.gov.au/"
+            },
+            {
+              "name": "Study Australia",
+              "url": "https://www.studyaustralia.gov.au/"
+            }
+          ],
+          "verification_status": "course_and_employer_specific"
+        }
+      ]
+    },
+    {
+      "id": "broader_career_transition",
+      "name": "Broader Career Transition",
+      "description": "Move beyond healthcare-specific roles into the wider technology sector. These options require building a competitive non-medical skill set.",
+      "pathways": [
+        {
+          "id": "software_engineering",
+          "title": "Software Engineering",
+          "route_type": "career_transition",
+          "possible_roles": [
+            "Junior Software Engineer",
+            "Backend Developer",
+            "Full-Stack Developer"
+          ],
+          "skills_to_build": [
+            "Programming fundamentals",
+            "Data structures",
+            "Algorithms",
+            "Git",
+            "Testing",
+            "Databases",
+            "APIs",
+            "Cloud basics"
+          ],
+          "portfolio_projects": [
+            "Two deployed full-stack applications",
+            "Tested REST API",
+            "Open-source contributions"
+          ],
+          "key_uncertainties": [
+            "Competitive entry-level market; a medical degree does not replace demonstrable engineering competence."
+          ],
+          "verification_status": "skills_and_employer_specific"
+        },
+        {
+          "id": "machine_learning_engineering",
+          "title": "Machine Learning Engineering",
+          "route_type": "career_transition",
+          "possible_roles": [
+            "Junior ML Engineer",
+            "Applied ML Engineer",
+            "AI Engineer"
+          ],
+          "skills_to_build": [
+            "Python",
+            "Linear algebra",
+            "Probability and statistics",
+            "Machine learning",
+            "Deep learning",
+            "Software engineering",
+            "Model deployment"
+          ],
+          "portfolio_projects": [
+            "End-to-end reproducible ML project",
+            "Model deployment API",
+            "Monitoring and evaluation pipeline"
+          ],
+          "key_uncertainties": [
+            "Usually a higher technical barrier than using existing AI APIs; formal quantitative training or substantial project evidence may be expected."
+          ],
+          "verification_status": "skills_and_employer_specific"
+        },
+        {
+          "id": "technical_product_management",
+          "title": "Technical Product Management",
+          "route_type": "career_transition",
+          "possible_roles": [
+            "Associate Product Manager",
+            "Product Analyst",
+            "Technical Product Owner"
+          ],
+          "skills_to_build": [
+            "Product discovery",
+            "User research",
+            "Roadmapping",
+            "Analytics",
+            "Technical communication",
+            "Agile delivery"
+          ],
+          "portfolio_projects": [
+            "Product case study",
+            "Prioritised roadmap",
+            "Metrics framework and experiment proposal"
+          ],
+          "key_uncertainties": [
+            "Prior product delivery experience is commonly important."
+          ],
+          "verification_status": "skills_and_employer_specific"
+        }
+      ]
+    }
+  ],
+  "comparison_dimensions": [
+    "time_to_first_relevant_job",
+    "need_for_new_degree",
+    "need_for_registration",
+    "technical_learning_load",
+    "clinical_background_advantage",
+    "portfolio_importance",
+    "research_potential",
+    "visa_and_occupation_uncertainty",
+    "long_term_career_flexibility"
+  ],
+  "visa_and_migration_checklist": {
+    "rule": "Never infer visa eligibility from a pathway title. Match the actual duties, occupation classification, skills assessment authority, current occupation list/instrument, state criteria, salary rules, employer sponsorship requirements, and applicant circumstances.",
+    "visa_families_to_review": [
+      {
+        "subclass": "189",
+        "name": "Skilled Independent",
+        "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"
+      },
+      {
+        "subclass": "190",
+        "name": "Skilled Nominated",
+        "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190"
+      },
+      {
+        "subclass": "491",
+        "name": "Skilled Work Regional (Provisional)",
+        "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491"
+      },
+      {
+        "subclass": "482",
+        "name": "Skills in Demand",
+        "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"
+      },
+      {
+        "subclass": "186",
+        "name": "Employer Nomination Scheme",
+        "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186"
+      },
+      {
+        "subclass": "494",
+        "name": "Skilled Employer Sponsored Regional",
+        "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-employer-sponsored-regional-494"
+      },
+      {
+        "subclass": "500",
+        "name": "Student",
+        "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+      }
+    ],
+    "official_general_source": "https://immi.homeaffairs.gov.au/what-we-do/skilled-migration-program/visa-options",
+    "required_checks": [
+      "Exact occupation and ANZSCO/OSCA classification where applicable",
+      "Current legislative instrument and eligible occupation list",
+      "Relevant skills assessment authority and assessment criteria",
+      "Points, English, age, work-experience, and qualification requirements where applicable",
+      "State or territory nomination criteria where applicable",
+      "Employer sponsorship, salary, and work-experience requirements where applicable",
+      "Medical registration and scope-of-practice requirements for clinical work"
+    ]
+  },
+  "iranian_specialist_training_profile": {
+    "description": "Keep Iranian specialist-training milestones separate from Australian licensing and college assessment milestones.",
+    "fields_to_track": [
+      "medical_degree_and_university",
+      "internship_completion",
+      "internal_medicine_residency_start_date",
+      "internal_medicine_residency_completion_date",
+      "iranian_written_specialist_board_exam_status",
+      "iranian_oral_specialist_board_exam_status",
+      "iranian_specialist_certificate_issue_status",
+      "detailed_training_rotations_and_logbook",
+      "post_residency_clinical_experience"
+    ],
+    "warning": "Iranian board examinations and specialist certification are evidence for an overseas qualification assessment; they are not AMC examinations and do not automatically confer Australian specialist recognition or registration."
+  },
+  "recommended_initial_learning_stack": {
+    "common_foundation": [
+      "Git and GitHub",
+      "Python",
+      "SQL",
+      "Statistics",
+      "Technical English",
+      "Data privacy and security basics"
+    ],
+    "software_track": [
+      "JavaScript/TypeScript",
+      "HTML/CSS",
+      "Backend APIs",
+      "Databases",
+      "Testing",
+      "Cloud deployment"
+    ],
+    "ai_track": [
+      "Python data stack",
+      "Machine learning fundamentals",
+      "LLM APIs",
+      "Retrieval-augmented generation",
+      "Evaluation and monitoring"
+    ],
+    "digital_health_track": [
+      "Clinical workflow modelling",
+      "FHIR",
+      "HL7 fundamentals",
+      "EHR concepts",
+      "Interoperability",
+      "Clinical safety"
+    ],
+    "research_track": [
+      "Research methods",
+      "Biostatistics",
+      "R or Python",
+      "Critical appraisal",
+      "Scientific writing"
+    ]
+  },
+  "source_policy": {
+    "preferred_sources": [
+      "Australian Government departments",
+      "Medical Board of Australia",
+      "Ahpra",
+      "AMC",
+      "RACP and other relevant specialist colleges",
+      "TGA",
+      "Australian Digital Health Agency",
+      "NHMRC",
+      "Australian universities"
+    ],
+    "avoid_as_final_authority": [
+      "Migration agent marketing pages",
+      "Unverified social media posts",
+      "Outdated forum posts",
+      "Commercial course advertisements"
+    ],
+    "maintenance": "Review visa instruments, occupation lists, regulator standards, and university admissions pages before each release."
+  },
+  "user_strategy_profile": {
+    "programming_level": "beginner",
+    "priority": "fast",
+    "education_readiness": "all",
+    "strategy_interpretation": {
+      "beginner": "Assume no substantial prior programming experience. Start with practical foundations and avoid making advanced coding a prerequisite for every pathway.",
+      "fast": "Prioritise the shortest credible route to a first relevant role, early portfolio evidence, and parallel exploration of clinical and non-clinical options. Do not imply guaranteed or instant employment.",
+      "all": "Keep self-study, short courses, graduate certificates, master's degrees, and PhD routes open. Compare each by time, cost, entry requirements, funding, and career outcome."
+    }
+  },
+  "personalized_strategy": {
+    "north_star": "Run two tracks in parallel: (1) preserve and assess the clinical-specialist option, and (2) build a fast-entry digital-health/health-tech profile from beginner level. Add deeper formal study only when it materially improves access to a target role.",
+    "priority_order": [
+      {
+        "rank": 1,
+        "track": "Clinical pathway preservation",
+        "why": "The user's internal medicine training and Iranian specialist-board milestones may be valuable evidence. Preserve this option while obtaining formal advice/assessment; do not assume Australian recognition.",
+        "near_term_actions": [
+          "Organise medical degree, internship, residency, rotations, logbooks, written and oral Iranian board results, specialist certificate status, and references.",
+          "Map the exact specialist assessment and registration requirements with the relevant college and Medical Board.",
+          "Keep AMC Standard Pathway as a separately assessed alternative rather than conflating it with specialist recognition."
+        ]
+      },
+      {
+        "rank": 2,
+        "track": "Fast-entry Digital Health / Clinical Systems",
+        "why": "This uses clinical domain knowledge without requiring the user to become an advanced software engineer before applying for adjacent roles.",
+        "target_roles": [
+          "Clinical Application Specialist",
+          "Clinical Systems Support / Analyst",
+          "Digital Health Implementation or Project Officer",
+          "HealthTech Product Specialist",
+          "Clinical Informatics Assistant / Analyst"
+        ],
+        "first_skills": [
+          "Excel or equivalent data handling",
+          "SQL fundamentals",
+          "Basic Python",
+          "Clinical workflow mapping",
+          "FHIR and HL7 concepts",
+          "Requirements writing and user acceptance testing"
+        ],
+        "portfolio": [
+          "A clinical workflow map and requirements document",
+          "A small synthetic-data patient or hospital dashboard",
+          "A simple FHIR demo showing how clinical resources are represented"
+        ]
+      },
+      {
+        "rank": 3,
+        "track": "Medical AI / LLM application building",
+        "why": "A clinically informed portfolio can be developed early using APIs and existing tools, while deeper ML engineering is treated as a later specialisation.",
+        "target_roles": [
+          "Clinical AI Evaluation Assistant",
+          "AI Product or Clinical Solutions Associate",
+          "Junior LLM Application Developer (after demonstrable coding practice)",
+          "Clinical AI Research Assistant"
+        ],
+        "first_skills": [
+          "Python basics",
+          "API and JSON fundamentals",
+          "Prompt and output evaluation",
+          "Retrieval-augmented generation concepts",
+          "Basic statistics and error analysis",
+          "Privacy, data governance, and clinical safety"
+        ],
+        "portfolio": [
+          "A medical knowledge assistant that cites source passages",
+          "A structured evaluation set testing accuracy, omissions, and unsafe outputs",
+          "A clinical note summarisation prototype using synthetic data only"
+        ],
+        "guardrail": "Do not use real patient-identifiable data in portfolio projects. Do not present prototypes as validated clinical decision support."
+      },
+      {
+        "rank": 4,
+        "track": "Formal education as an accelerator, not an automatic first step",
+        "why": "The user is open to every level of study, but the fast priority means selecting education only after identifying the target role and checking whether it is required or offers a clear advantage.",
+        "options": [
+          {
+            "level": "Self-study",
+            "best_for": "Testing fit and building initial skills at low cost",
+            "examples": [
+              "Python basics",
+              "SQL",
+              "Git/GitHub",
+              "FHIR fundamentals",
+              "small portfolio projects"
+            ]
+          },
+          {
+            "level": "Short course / microcredential",
+            "best_for": "Targeted gaps, practical evidence, and structured learning",
+            "examples": [
+              "Health informatics",
+              "data analytics",
+              "software development foundations",
+              "AI evaluation"
+            ]
+          },
+          {
+            "level": "Graduate certificate / diploma",
+            "best_for": "A more formal transition credential when employers or roles value it",
+            "examples": [
+              "Health informatics",
+              "data analytics",
+              "public health"
+            ]
+          },
+          {
+            "level": "Master's",
+            "best_for": "Structured career transition, specialist knowledge, networks, or roles with postgraduate expectations",
+            "examples": [
+              "Health Informatics",
+              "Data Science",
+              "Public Health",
+              "Clinical Epidemiology"
+            ]
+          },
+          {
+            "level": "PhD",
+            "best_for": "A research-led career in clinical AI, biomedical informatics, digital health, or epidemiology",
+            "examples": [
+              "Clinical AI evaluation",
+              "Biomedical Informatics",
+              "Digital Health",
+              "Health Data Science"
+            ]
+          }
+        ],
+        "decision_rule": "Before enrolling, compare total cost, duration, admission prerequisites, scholarship availability, work rights/visa implications, graduate outcomes, and whether the qualification is actually requested in relevant job advertisements."
+      }
+    ],
+    "first_12_weeks": [
+      {
+        "weeks": "1-2",
+        "focus": "Digital foundations",
+        "deliverables": [
+          "Set up GitHub and a clean project repository",
+          "Learn basic Python syntax and notebooks",
+          "Learn basic SQL queries",
+          "Write a one-page clinical workflow problem statement"
+        ]
+      },
+      {
+        "weeks": "3-4",
+        "focus": "First visible project",
+        "deliverables": [
+          "Build a small dashboard using synthetic or public data",
+          "Document the problem, data source, limitations, and screenshots",
+          "Practise Git commits and a clear README"
+        ]
+      },
+      {
+        "weeks": "5-8",
+        "focus": "Health interoperability and AI prototype",
+        "deliverables": [
+          "Learn FHIR resource basics",
+          "Build a small API-based medical knowledge prototype",
+          "Add citations and a test set",
+          "Document failure modes and safety limitations"
+        ]
+      },
+      {
+        "weeks": "9-12",
+        "focus": "Market test and targeted applications",
+        "deliverables": [
+          "Create a clinical-digital CV and LinkedIn profile",
+          "Analyse 20 relevant Australian job advertisements for recurring requirements",
+          "Tailor the portfolio to the 2-3 most frequent skill gaps",
+          "Apply selectively to entry/adjacent roles while continuing clinical pathway assessment"
+        ]
+      }
+    ],
+    "weekly_time_allocation": {
+      "suggested_hours": "8-12 hours per week, adjustable",
+      "split": [
+        {
+          "activity": "Practical programming and data skills",
+          "share_percent": 40
+        },
+        {
+          "activity": "Digital health / FHIR / clinical systems",
+          "share_percent": 25
+        },
+        {
+          "activity": "Portfolio project",
+          "share_percent": 25
+        },
+        {
+          "activity": "Career research and applications",
+          "share_percent": 10
+        }
+      ],
+      "note": "This is a starting allocation, not a fixed requirement. Increase formal exam or specialist-assessment preparation when dates and eligibility are confirmed."
+    },
+    "decision_gates": [
+      "After 4 weeks: decide whether coding is engaging enough to continue toward developer roles or whether clinical systems/product roles are a better fast-entry fit.",
+      "After 8 weeks: assess whether the portfolio demonstrates practical ability, not just course completion.",
+      "After 12 weeks: use real job-ad requirements and feedback to choose between direct applications, a targeted short course, a graduate qualification, or a research degree."
+    ],
+    "avoid": [
+      "Starting with advanced machine learning or deep learning before Python, statistics, and software basics.",
+      "Enrolling immediately in an expensive master's or PhD without a defined target role and funding/visa analysis.",
+      "Assuming a medical degree alone qualifies someone for software engineering or AI engineering jobs.",
+      "Treating any non-clinical job title as automatically eligible for a skilled visa.",
+      "Abandoning the clinical pathway before obtaining a realistic formal assessment."
+    ]
+  }
+}
