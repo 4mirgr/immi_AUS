@@ -477,6 +477,11 @@
     D.pathways.forEach(p => p.sources.forEach(s => add(s, p.name)));
     D.study.forEach(p => p.sources.forEach(s => add(s, p.name)));
     D.milestones.forEach(m => add(m.source, m.title));
+    (D.australia?.pathway_groups || []).forEach(g =>
+      (g.pathways || []).forEach(p =>
+        (p.official_sources || []).forEach(s => add({ title: s.name, url: s.url, kind: 'official' }, p.title || g.name))));
+    (D.australia?.visa_and_migration_checklist?.visa_families_to_review || []).forEach(v =>
+      add({ title: `Visa ${v.subclass} — ${v.name}`, url: v.official_url, kind: 'official' }, 'استرالیا — ویزا'));
     const order = { official: 0, secondary: 1, commercial: 2 };
     const rows = [...map.values()].sort((a, b) => order[a.kind] - order[b.kind] || a.title.localeCompare(b.title));
     const st = D.status;

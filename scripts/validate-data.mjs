@@ -14,6 +14,7 @@ const study = load('study');
 const funding = load('funding');
 const team = load('team');
 const references = load('references');
+const australia = load('australia_pathways');
 const tasks = load('tasks');
 const milestones = load('milestones');
 const isDate = s => /^\d{4}-\d{2}-\d{2}$/.test(s) && !Number.isNaN(Date.parse(s));
@@ -119,6 +120,18 @@ if (references) {
         if (!it.id || !it.title) errors.push(`references/${tr.id}/items: id and title required`);
         if (it.checklist && !Array.isArray(it.checklist)) errors.push(`references/${tr.id}/${it.id}: checklist must be an array`);
       }
+    }
+  }
+}
+
+if (australia) {
+  if (!isDate(australia.last_reviewed)) errors.push('australia_pathways.last_reviewed must be YYYY-MM-DD');
+  if (!Array.isArray(australia.pathway_groups) || australia.pathway_groups.length === 0) errors.push('australia_pathways: pathway_groups missing');
+  else for (const g of australia.pathway_groups) {
+    if (!g.name) errors.push('australia_pathways/pathway_groups: name missing');
+    for (const p of g.pathways || []) {
+      if (!p.id || !p.title) errors.push(`australia_pathways/${g.id || g.name}: pathway id and title required`);
+      for (const s of p.official_sources || []) if (!isUrl(s.url || '')) errors.push(`australia_pathways/${p.id}: bad official source url`);
     }
   }
 }

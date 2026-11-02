@@ -6,13 +6,13 @@ import { createHash } from 'node:crypto';
 
 const root = new URL('../', import.meta.url);
 const read = p => JSON.parse(readFileSync(new URL(p, root), 'utf8'));
-const FILES = ['pathways', 'study', 'milestones', 'phd-opportunities', 'funding', 'team', 'references'];
+const FILES = ['pathways', 'study', 'milestones', 'phd-opportunities', 'funding', 'team', 'references', 'australia_pathways'];
 
 function collect(node, found = new Set()) {
   if (Array.isArray(node)) node.forEach(n => collect(n, found));
   else if (node && typeof node === 'object') {
     for (const [k, v] of Object.entries(node)) {
-      if ((k === 'url' || k === 'link') && typeof v === 'string' && v.startsWith('http')) found.add(v);
+      if ((k === 'url' || k === 'link' || k === 'official_url' || k === 'official_general_source') && typeof v === 'string' && v.startsWith('http')) found.add(v);
       else collect(v, found);
     }
   }
