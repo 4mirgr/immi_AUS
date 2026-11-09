@@ -1,288 +1,304 @@
 {
-  "checkedAt": "2026-11-02T13:09:08.394Z",
+  "checkedAt": "2026-11-09T13:38:41.871Z",
   "sources": {
     "https://ambteheran.esteri.it/fa/?p=4368": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "e29cec1b48311487e21d7422b1cdf809456d0c88d5f06fde77c1abfa9ad9aafd",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "8914c161a981bb5c189c965c90e202a445ed2c259d8dcd8b2b161bf1156ec773",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://foundation.racgp.org.au/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "c0349fcdb7e0c9f4a3e2e0c6a0db7e63b1bf45bc29eacd8803e3a787f231a615",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "a99fed8bf5b5706bac804605c61791729b03447f87a24631eb71b9d8d7338548",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-employer-sponsored-regional-494": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "f36e64d45632b027309e817e29125c24bb337b259190afd62e0632f146011318",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "c20606f47b3373d74f220cbf4330b79ca340b70daf43f6a63e60718023c30459",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "e9ac66c1e7505ac4e644232a732da5c6e32a882725220afe05b647d8d6fe8084",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "81e02a38182a3ad512d372be87193deb78bea12ccad383bcfef90ebad3ea9dbc",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "2bbb1fb2e7233a1c4c4a89a965d22bfc4b14b9b6ce19a474e4be51c79bd76c8d",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "777170614e8f0b0661332f24866bbcfa6af3fdaf4266c478374309236ad5bcc8",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "e7fbc39dfe72c6ecae8de682257148ee439f4c6f70af71c0094332249e75b086",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://immi.homeaffairs.gov.au/what-we-do/skilled-migration-program/visa-options": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "06b0b89459f88b5aeb3b785640b54b157f03245e3ce4f323b47145674caba049",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://mcc.ca/practice-ready-assessment/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "0d46abe77fbc358c9677ba539b3477b03ad3e8959aba8737c028100d55068d46",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://medicalboard.gov.au/Registration/International-Medical-Graduates/Specialist-Pathway/Specialist-recognition.aspx": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "f263e408ad9e7b24522240be7d9d2e55f018cac3a898d94b83d4caf8039c36a7",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship": {
       "state": "error",
       "http": 403,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://travel.state.gov/content/travel/en/us-visas.html": {
       "state": "error",
       "http": 403,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.abs.gov.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "2bc86733e4cddb44e81ae5c8c028cacee3809211bfb1fc5b763852b2aa244bc3",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "0d0a56215f1513962ba598d7a84270b9b1238fe1d3124685c89a6b04ea39ea54",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.ahpra.gov.au/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "579bed73e99613fa3048c04ca1193a38e876ea916f1f6b97d4fec6a3ceafd65a",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.aihw.gov.au/": {
       "state": "error",
       "http": 403,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.amc.org.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "5ac36a54aa8beeb588842eb53a5e8d64361d52b257c7c72c1a54a2ea222897e5",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "b8fef453057f2ba4952f4eb8ae81cc155c751c02cbdeda27f62992f450fcefa8",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.amc.org.au/assessment/pathways": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "be6ab7d852b94bd09d7e37cb0caf0f0832903dcad8dcbeda2ac50f799f4a2550",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "8d3d8878591642e431d7a5ec2319e6233ff271a7efeb709d24781c11ae8da9db",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.arc.gov.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "c63a85292e62c9adaf6407cb1cf775b057eb314680ce8f84a9284e83bdb65aa1",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "7894e3bf212881b72af6e6abefa711a6479a891f8c97de99d0b25778f6aa3891",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.charite.de/en/studies_and_teaching/doctoral_studies/": {
       "state": "error",
       "http": 404,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.csiro.au/en/careers/students-and-graduates/scholarships/industry-phd": {
       "state": "error",
       "http": 404,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.digitalhealth.gov.au/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "e8039ec5ef4d46a9833675ddc5d6e862fd66ff88f3d18fa4dc4faab75b7ce36a",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.discoverphds.com/?p=32730": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "97256d5b87244670c8fa523cbc5de97190afd44fbd1928a1041db077f62dde38",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "5b58756a9df492d3d9670404de9c1e688680395da2a498465a38d7ee7c31393f",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.ecfmgepic.org/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "e2d1d3f393569c99acdfd1c198e623670f598dcb3d6d79b334a2f2cf6585bf0b",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.education.gov.au/research-block-grants/research-training-program": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "d851fae41c7e11a362440c9cf30aaedbf549ab0be909858d66a56a845d36d3b9",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.esteri.it/en/servizi-opportunita/opportunita/borse-di-studio/per-cittadini-stranieri/borsestudio_stranieri/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "4de627c779b0c28efc8c0dccf6e7d4e9f644617dda1e616170bad3dbff854b43",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.esteri.it/wp-content/uploads/2026/03/Bando-26-27-ITA.pdf": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "8d67af2c0b6b27f554749fb9ca5c6ea149b245123bc7ea5285d23025ac606d0d",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.gmc-uk.org/registration-and-licensing/join-the-register/plab": {
       "state": "error",
       "http": 403,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.grants.gov.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "4e437ef962ea4474342abf4b615a1ba77323801e10eabd2449b6eda0efe4101b",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "afb21f6c7248735f98365ee86057773d4495f775e1b6d204b27c8aa27219a0f0",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.jobsandskills.gov.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "adf0b3eb5fc26e94e8ebcea644a8be977d7f8fc322e4a2e4b141a8e55f0b9fa7",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "3533d5075d50ed9fdcf903be99df9c5e73fe73e6c54a6b7f2838f941917bfe0f",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.make-it-in-germany.com/en/qualification-recognition/regulated-professions/doctor": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "dc66b677607b35bc8078ffb47cbaab07cabfe733f12efd7df9423167f305db1e",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "5843c7a6c9c5e8691768496ea9d087aaba3f781438d1c8f60487faea7efff3a0",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.medicalboard.gov.au/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "43a54192e674089f02076aa9c56c117454d2055a010c3933057878226cfb5cf1",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.mur.gov.it/it/news/mercoledi-16092026/universita-mur-sono-15221-i-posti-disponibili-le-specializzazioni-mediche": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "b2cedc1a86c9b596a61ae13a3764b8274bcd8e0fe87d8b8b351a4cbffc84cb6d",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "8cd06d7d8795e748993ee25fbab0d8e90e30cb5ba59d6ed53a49d021fff1a496",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.nhmrc.gov.au/": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "4ec2aaae1186c7ffa8b4d08b9674ba2c64448be11699e00ab57f0e6b2fe89ddb",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.oaic.gov.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "ab36aaa82fbc69ca4e5c90a7cda69bf231a87cee56bcb3b033effe3963318bcf",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "76396155b002eebd0188a951c134f6f33a863e2d3e75c8d15f03acb6056fe24b",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.qut.edu.au/study/fees-and-scholarships/scholarships/examining-system-level-impact-of-healthcare-ai-phd-scholarship": {
       "state": "error",
       "http": 403,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.racp.edu.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "0eef69503034ea6d941b044b7286d8148f44e6b7ff76de8e3cc3be62cb681575",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "dc89c822a11a6c244fac79d6e2d8522771985450fb5008fa99041bef80ea73b9",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.seek.com.au/job/94842237": {
       "state": "error",
       "http": 403,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.studyaustralia.gov.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "208c9c831ecd3e07ad52b3168425520044f9ef1201134098b91800452d2953dc",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "481c654daf94cca535df4e25097b488bc5a8a3b8f58fe49e963f22a11956df22",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.studyinaustralia.gov.au/": {
       "state": "error",
       "http": 0,
       "error": "fetch failed",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.sydney.edu.au/scholarships/c/ai-based-patient-facing-question-and-answer-systems.html": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "e34a2c8134683ab8597fefdb7cd9627dab55da2fe3e44f1a1ac7a4f4061b5a89",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.tga.gov.au/": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "2be95a06f12c80fef53b616a4237bb0bffadf9eec48e314df68df852140d2478",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "7397bfc326e26ddccaa0e11fbb8ec24262ba5f95c7dfd95d95bfa3b79352bce1",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/scuole-di-specializzazione/come-candidarsi-a-una-scuola-di-specializzazione-dellarea-medica": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "795cfb31aa4799d9ee52bdacc81859133f90a874c84b1193b56b95654ad2ba3f",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.unipd.it/en/borse-studio-regionali": {
-      "state": "new",
+      "state": "changed",
       "http": 200,
-      "hash": "3a4307e6a45549c17ae96747f68161f92457a66315f8b9d3fd627de60591cf0c",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "hash": "466a842e0f4abdaffc5e37c52d3681625fecf82938afa45b9dc7d2adaa7ec7f8",
+      "checkedAt": "2026-11-09T13:38:41.871Z",
+      "changedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.unipd.it/en/phd-programmes": {
-      "state": "new",
+      "state": "ok",
       "http": 200,
       "hash": "c360cedc26600d27948a9998e407cc4a7c399439c498752af29cd503b39e9436",
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.uniroma1.it/en/pagina-strutturale/phd-medical-and-clinical-sciences": {
       "state": "error",
       "http": 404,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.unsw.edu.au/research/research-study/research-degrees": {
       "state": "error",
       "http": 404,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     },
     "https://www.uts.edu.au/scholarship/international-research-training-program-scholarship-irtp": {
       "state": "error",
       "http": 404,
-      "checkedAt": "2026-11-02T13:09:08.394Z"
+      "checkedAt": "2026-11-09T13:38:41.871Z"
     }
   }
 }
